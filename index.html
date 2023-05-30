@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-/********************** El diseño responsive le fata correccion **********************/
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Samuel</title>
+    <title>Samuel Gonzalez</title>
 
     <link rel="shortcut icon" href="src/ico_web.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
@@ -21,41 +19,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 
 </head>
-
+<!-- C A  B E C E R A-->
 <body>
-
     <header>
         <div class="container">
             <nav class="flex items-centre justify-betwen">
+                <div class="logo flex items-centre justify-betwen"> <img src="src/logo.png" width="50px" alt="logo">
+                </div>
                 <div class="left flex justify-right">
-                    <div class="logo"> <img src="src/logo.png" width="30px" alt="logo"> </div>
                     <div>
                         <a href="#about">Sobre mi</a>
                         <a href="#skills">Habilidades</a>
                     </div>
+                    <div class="right">
+                        <button class="btn btn-primary">Contactar</button>
+                    </div>
                 </div>
-                <div class="right">
-                    <button class="btn btn-primary">Contactar</button>
-                </div>
+
             </nav>
+
         </div>
     </header>
-
+<!-- P R E S E N T A C I O N -->
+<section class="intro">
     <div class="hero flex items-centre justify-between">
-        <div class="left flex-1 justify-center">
-            <img src="src/portfolio.png" height="400px">
+        <div class="left flex-1 justify-right">
+            <img class="img1" src=" " height="400px">
         </div>
-        <div class="right flex-1">
-            <br><br><br><br>
+        <div style="margin-top: 2em;" class="right flex-1">
             <h3>Hola, me precento soy</h3>
             <h2>
                 <span> Samuel </span>
             </h2>
-            <p style="margin-right: 5em;" >
-                Soy un apasionado del diseño y desarrollo, con habilidades y experiencia 
-                en la creación de sitios web que son tanto intuitivos como atractivos para 
-                el usuario. Mi enfoque se centra en la creación de experiencias de usuario 
-                que sean fáciles de usar y visualmente atractivas, con el objetivo de 
+            <p style="margin-right: 5em;">
+                Soy un apasionado del diseño y desarrollo, con habilidades y experiencia
+                en la creación de sitios web que son tanto intuitivos como atractivos para
+                el usuario. Mi enfoque se centra en la creación de experiencias de usuario
+                que sean fáciles de usar y visualmente atractivas, con el objetivo de
                 mejorar la interacción y satisfacción del usuario con el sitio web.
             </p>
 
@@ -78,12 +78,14 @@
             <br><br>
         </div>
     </div>
-
+</section>
+    
+<!-- S O B R E - M I-->
     <header>
         <section class="about">
             <div id="about" class="container flex items-centre">
                 <div class="left flex-1 justify-right">
-                    <img src="src/sago.png" height="400px" alt="portafolio imagen">
+                    <img class="img2" src="src/sago.png" height="400px" alt="portafolio imagen">
                 </div>
 
                 <div class="right flex-1">
@@ -93,25 +95,23 @@
                             Computacionales</strong>. <br><br>
 
                         Mi enfoque en el diseño y desarrollo web es crear interfaces limpias y atractivas que hagan que
-                        los
-                        usuarios se sientan cómodos y puedan navegar fácilmente. Me especializo en la creación de
-                        <strong>diseños responsive</strong>
-                        que se adapten a dispositivos móviles, lo que permite una experiencia de usuario óptima,
-                        trabajando con HTML,
-                        CSS y JavaScript, lo que me permite crear soluciones técnicas y funcionales. <br><br>
+                        los usuarios se sientan cómodos y puedan navegar fácilmente. Lo que permite una experiencia de
+                        usuario óptima, trabajando con HTML, CSS y JavaScript, lo que me permite crear soluciones
+                        técnicas y
+                        funcionales.
+                        <br><br>
 
                         Cuento con un humor algo ácido y una personalidad muy carismática. Me considero una persona
-                        capaz
-                        y proactiva, con mucho interés en aprender cada día más, me encanta interactuar con la gente y
-                        trabajar
-                        en equipo.
+                        capaz y proactiva, con mucho interés en aprender cada día más, me encanta interactuar con la
+                        gente y
+                        trabajar en equipo.
                     </p>
                     <div class="social">
 
                         <img src="src/ic_gh.png" alt="GitHub" width="40px"
-                            onclick="window.open('https://github.com/JordaniusNotDev', '_blank');">
+                            onclick="window.open('https://github.com/Bimori404', '_blank');">
                         <img src="src/ic_ig.png" alt="Instragram" width="40px"
-                            onclick="window.open('https://www.instagram.com/jordanius.irl/', '_blank');">
+                            onclick="window.open('https://www.instagram.com/who.is.bimori/', '_blank');">
                         <img src="src/ic_in.png" alt="Linkedin" width="40px"
                             onclick="window.open('https://www.linkedin.com/in/jsamuelpgonzalez/', '_blank');">
 
@@ -119,7 +119,7 @@
                 </div>
             </div>
         </section>
-
+<!-- H A B I L I D A D E S -->
         <section class="skills">
             <div id="skills" class="container">
                 <h1 class="skills-head">Habilidades</h1><br>
@@ -128,8 +128,8 @@
                     <div class="card">
                         <img height="50px" src="src/img_card.jpg" alt="">
                         <h2> LENGUAJES </h2>
-                        <p> Comence aprendiendo a programar en Java, de ahí comense a 
-                            explorar mas el mundo de la programación aprendiendo mas 
+                        <p> Comence aprendiendo a programar en Java, de ahí comense a
+                            explorar mas el mundo de la programación aprendiendo mas
                             lenguajes por cuenta propia.
                         </p>
                         <p> Cuento con experiencia en los sigientes lenguajes: </p>
@@ -138,7 +138,7 @@
                             <li>HTML</li>
                             <li>CSS</li>
                         </ul>
-                        <p> Actual ruta de aprendizaje: </p>
+                        <p class="rutaActual"> Actual ruta de aprendizaje: </p>
                         <ul class="learning">
                             <li>Lenguaje: JavaScript</li>
                             <li>Framework: Vue</li>
@@ -147,30 +147,30 @@
                     <div class="card">
                         <img height="50px" src="src/img_card.jpg" alt="">
                         <h2> FRAMEWORKS </h2>
-                        <p> Decidí comenzar mi aprendizaje de frameworks utilizando Vue 
-                            como mi primera opción, y aunque todavía estoy en proceso 
-                            de aprendizaje, he estado trabajando constantemente para mejorar 
+                        <p> Decidí comenzar mi aprendizaje de frameworks utilizando Vue
+                            como mi primera opción, y aunque todavía estoy en proceso
+                            de aprendizaje, he estado trabajando constantemente para mejorar
                             mis habilidades. <br><br>
-                            Aunque Vue fue el primer framework que decidi aprender, sé que no 
-                            es necesario limitarse a un solo framework. A medida que me 
-                            familiarice con Vue, podres explorar otros frameworks populares 
-                            como React o Angular. 
+                            Aunque Vue fue el primer framework que decidi aprender, sé que no
+                            es necesario limitarse a un solo framework. A medida que me
+                            familiarice con Vue, podres explorar otros frameworks populares
+                            como React o Angular.
                         </p>
                     </div>
                     <div class="card">
                         <img height="50px" src="src/img_card.jpg" alt="">
                         <h2> DISEÑO </h2>
-                        <p> Tengo habilidades y conocimientos en el uso de las aplicaciones de 
+                        <p> Tengo habilidades y conocimientos en el uso de las aplicaciones de
                             diseño gráfico de Adobe, específicamente en:
                         </p>
-                            <ul class="learning">
-                                <li>Adobe XD</li>
-                                <li>Adobe Photoshop</li>
-                                <li>Adobe Illustrator</li>
-                            </ul>
+                        <ul class="learning">
+                            <li>Adobe XD</li>
+                            <li>Adobe Photoshop</li>
+                            <li>Adobe Illustrator</li>
+                        </ul>
                         <p>
-                            He trabajado y tengo experiencia en el uso de estas herramientas 
-                            para crear y diseñar diversos tipos de proyectos visuales, tales 
+                            He trabajado y tengo experiencia en el uso de estas herramientas
+                            para crear y diseñar diversos tipos de proyectos visuales, tales
                             como diseños de logotipos y diseño de interfaces de usuario.
                         </p>
                     </div>
