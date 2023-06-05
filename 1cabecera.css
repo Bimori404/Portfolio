@@ -6,6 +6,14 @@ header label, header #menu-bar  {
     display: none;
 }
 
+header.hed, div.navbar, nav {
+    background-color: var(--bgNav);
+    /* border: solid 2px #fbff00; */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
 header nav .left div a {
     color: var(--white);
     text-decoration: none;
@@ -13,8 +21,16 @@ header nav .left div a {
     margin-right: 2em;
     text-transform: uppercase;
     transition: all .2s ease;
-    /*
-    border: solid 2px #fbff00;*/
+    /* border: solid 2px #fbff00; */
+}
+
+div.left.flex.justify-right {
+    /* border: solid 2px #fbff00; */
+    margin-left: 49em;
+}
+div.logo.flex.items-centre.justify-betwen {
+    /* border: solid 2px #fbff00; */
+    margin-left: 1em;
 }
 
 header nav .left a:hover {

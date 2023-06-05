@@ -1,8 +1,16 @@
 section.intro {
     background-color: var(--bgDark);
+}
 
-    padding: 0;
-    margin: 0;
+div.hero {
+    max-width: 1152px;
+    /* arriba | derecha | abajo | izquierda */
+    padding: 0 15px 0 15px;
+    margin: -15vh auto 0 auto;
+}
+
+div.left.flex-1.justify-right {
+    margin: 5vh auto auto auto;
 }
 
 .hero .left img {
