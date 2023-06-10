@@ -100,6 +100,18 @@ body {
     div.left.flex.justify-right {
         padding: 0;
         margin: 0;
+
+    }
+
+    header.hed, div.navbar, nav {
+        background-color: var(--bgNav);
+        /* position: fixed;
+        top: 0;
+        z-index: 100;
+
+        left: 0;
+        width: 100%;
+        padding: 20px; */
     }
 
     /*-- P R E S E N T A C I O N --*/
