@@ -17,80 +17,104 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Poppins:wght@200&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-
 </head>
 <!-- C A  B E C E R A-->
 <body>
-    <header>
-        <div class="container">
+    <header class="hed">
+        <div class="container navbar">
             <nav class="flex items-centre justify-betwen">
-                <div class="logo flex items-centre justify-betwen"> <img src="src/logo.png" width="50px" alt="logo">
+
+                <div class="logo flex items-centre justify-betwen">
+                    <a onclick="scrollToTop()">
+                        <img src="src/logo.png" width="50px" alt="logo" style="margin-top: .5em;">
+                    </a>
                 </div>
+
                 <div class="left flex justify-right">
                     <div>
                         <a href="#about">Sobre mi</a>
                         <a href="#skills">Habilidades</a>
                     </div>
-                    <div class="right">
+                    <!--div class="right">
                         <button class="btn btn-primary">Contactar</button>
-                    </div>
+                    </div-->
                 </div>
 
             </nav>
 
-        </div>
-    </header>
-<!-- P R E S E N T A C I O N -->
-<section class="intro">
-    <div class="hero flex items-centre justify-between">
-        <div class="left flex-1 justify-right">
-            <img class="img1" src=" " height="400px">
-        </div>
-        <div style="margin-top: 2em;" class="right flex-1">
-            <h3>Hola, me presento soy</h3>
-            <h2>
-                <span> Samuel </span>
-            </h2>
-            <p style="margin-right: 5em;">
-                Soy un apasionado del diseño y desarrollo, con habilidades y experiencia
-                en la creación de sitios web que son tanto intuitivos como atractivos para
-                el usuario. Mi enfoque se centra en la creación de experiencias de usuario
-                que sean fáciles de usar y visualmente atractivas, con el objetivo de
-                mejorar la interacción y satisfacción del usuario con el sitio web.
-            </p>
-
-            <div style="padding-bottom: 5em;">
-                <button class="btn btn-secondary" onclick="downloadPDF()">Descarga mi CV</button>
-            </div>
-
             <script>
-                function downloadPDF() {
-                    var link = document.createElement('a');
-                    link.href = 'src/cv/JSamuelPGonzalez_CV.pdf';
-                    link.download = 'CV_Samuel_Gonzalez.pdf';
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
+                function scrollToTop() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth" // agrega un desplazamiento suave
+                    });
                 }
+                // Escucha el evento de clic en los enlaces de navegación
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault(); // Evita el comportamiento predeterminado del enlace
+
+                        // Obtiene el elemento al que se va a desplazar (usando el valor del atributo "href")
+                        const target = document.querySelector(this.getAttribute('href'));
+
+                        // Realiza el desplazamiento suave usando "scrollTo"
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    });
+                });
             </script>
 
-
-            <br><br>
         </div>
-    </div>
-</section>
-    
-<!-- S O B R E - M I-->
-    <header>
-        <section class="about">
-            <div id="about" class="container flex items-centre">
-                <div class="left flex-1 justify-right">
-                    <img class="img2" src="src/sago.png" height="400px" alt="portafolio imagen">
+    </header>
+    <div id="hero"></div>
+    <!-- P R E S E N T A C I O N -->
+    <section class="intro">
+        <div class="hero flex items-centre justify-between">
+            <div class="left flex-1 justify-right">
+                <img class="img2" src="src/sago.png" height="400px" alt="portafolio imagen">
+            </div>
+            <div style="margin-top: 2em;" class="right flex-1">
+                <h3 class="hello">Hola, me presento soy</h3>
+                <h2>
+                    <span> Samuel </span>
+                </h2>
+                <p style="margin-right: 5em;">
+                    Soy un apasionado del diseño y desarrollo, con habilidades y experiencia
+                    en la creación de sitios web que son tanto intuitivos como atractivos para
+                    el usuario. Mi enfoque se centra en la creación de experiencias de usuario
+                    que sean fáciles de usar y visualmente atractivas, con el objetivo de
+                    mejorar la interacción y satisfacción del usuario con el sitio web.
+                </p>
+
+                <div style="padding-bottom: 1em;">
+                    <button class="btn btn-secondary" onclick="downloadPDF()">Descarga mi CV</button>
                 </div>
+
+                <script>
+                    function downloadPDF() {
+                        var link = document.createElement('a');
+                        link.href = 'src/cv/JSamuelPGonzalez_CV.pdf';
+                        link.download = 'CV_Samuel_Gonzalez.pdf';
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                    }
+                </script>
+
+                <br><br>
+            </div>
+        </div>
+        <div id="about"></div>
+    </section>
+    <!-- S O B R E - M I-->
+    <header>
+        <section class="about" >
+            <div class="container flex items-centre">
 
                 <div class="right flex-1">
                     <h1>Sobre <span>mi</span> </h1>
-                    <p>
+                    <p class="descAbout">
                         Actualmente estoy estudiando la carrera de <strong>Ingeniería en Sistemas
                             Computacionales</strong>. <br><br>
 
@@ -106,22 +130,24 @@
                         gente y
                         trabajar en equipo.
                     </p>
+                    <!------------------------------------>
                     <div class="social">
-
                         <img src="src/ic_gh.png" alt="GitHub" width="40px"
                             onclick="window.open('https://github.com/Bimori404', '_blank');">
                         <img src="src/ic_ig.png" alt="Instragram" width="40px"
                             onclick="window.open('https://www.instagram.com/who.is.bimori/', '_blank');">
                         <img src="src/ic_in.png" alt="Linkedin" width="40px"
                             onclick="window.open('https://www.linkedin.com/in/jsamuelpgonzalez/', '_blank');">
-
                     </div>
                 </div>
+
             </div>
         </section>
-<!-- H A B I L I D A D E S -->
+        <!-- H A B I L I D A D E S -->
+        <div id="skills"></div>
         <section class="skills">
-            <div id="skills" class="container">
+            
+            <div class="container">
                 <h1 class="skills-head">Habilidades</h1><br>
                 <div class="card-grid">
                     <!------------------------------------>
@@ -144,6 +170,7 @@
                             <li>Framework: Vue</li>
                         </ul>
                     </div>
+                    <!------------------------------------>
                     <div class="card">
                         <img height="50px" src="src/img_card.jpg" alt="">
                         <h2> FRAMEWORKS </h2>
@@ -157,6 +184,7 @@
                             como React o Angular.
                         </p>
                     </div>
+                    <!------------------------------------>
                     <div class="card">
                         <img height="50px" src="src/img_card.jpg" alt="">
                         <h2> DISEÑO </h2>
@@ -177,6 +205,7 @@
 
                 </div>
             </div>
+
         </section>
     </header>
 
