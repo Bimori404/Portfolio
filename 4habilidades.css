@@ -1,3 +1,10 @@
+/* * {
+    border: dotted .5px red;
+} */
+
+section.skills, div.container {
+    margin-top: -1em;
+}
 
 section.skills div.container {
     /*background: rgb(255, 4, 4);*/

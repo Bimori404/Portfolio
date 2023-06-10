@@ -97,12 +97,27 @@ body {
 
 
     /*-- C A B E C E R A--*/
-    button.btn.btn-primary {
+    div.left.flex.justify-right {
         padding: 0;
         margin: 0;
     }
 
     /*-- P R E S E N T A C I O N --*/
+    section.intro {
+        padding: 0;
+        margin: 0;
+    }
+    
+    div.left.flex-1.justify-right img {
+        padding-top: 4.5em;
+        padding-left: 1.5em;
+    }
+    div.right.flex-1 h2 span {
+        margin-left: 9.5vw;
+    }
+    div.right.flex-1 h3.hello {
+        margin-left: 2em;
+    }
     section.intro div.hero {
         display: grid;
         grid-template-columns: repeat(1, .5fr);
@@ -142,9 +157,9 @@ body {
         margin: 1vh 1vh 1vh -10vh;
     }
 
-    #about p {
+    p.descAbout {
         /* Arriba | Derecha | Abajo | Izquierda */
-        margin: 0 10vh 1vh -1vh;
+        margin: 0 -10vh 0 -7vh;
     }
 
     /*-- H A B I L I D A D E S --*/
