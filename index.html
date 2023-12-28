@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -17,29 +17,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Poppins:wght@200&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+
+
 </head>
-<!-- C A  B E C E R A-->
+
 <body>
+    <!-- C A  B E C E R A -->
     <header class="hed">
         <div class="container navbar">
             <nav class="flex items-centre justify-betwen">
-
                 <div class="logo flex items-centre justify-betwen">
                     <a onclick="scrollToTop()">
                         <img src="src/logo.png" width="50px" alt="logo" style="margin-top: .5em;">
                     </a>
                 </div>
 
-                <div class="left flex justify-right">
+                <div class="left flex justify-right hiddenbar">
                     <div>
                         <a href="#about">Sobre mi</a>
                         <a href="#skills">Habilidades</a>
+                        <a href="#projects">Proyectos</a>
                     </div>
-                    <!--div class="right">
-                        <button class="btn btn-primary">Contactar</button>
-                    </div-->
                 </div>
-
             </nav>
 
             <script>
@@ -74,7 +74,7 @@
             <div class="left flex-1 justify-right">
                 <img class="img2" src="src/sago.png" height="400px" alt="portafolio imagen">
             </div>
-            <div style="margin-top: 2em;" class="right flex-1">
+            <div style="margin-top: 4em;" class="right flex-1">
                 <h3 class="hello">Hola, me presento soy</h3>
                 <h2>
                     <span> Samuel </span>
@@ -82,7 +82,9 @@
                 <p style="margin-right: 5em;">
                     Soy un apasionado del diseño y desarrollo, con habilidades y experiencia
                     en la creación de sitios web que son tanto intuitivos como atractivos para
-                    el usuario. Mi enfoque se centra en la creación de experiencias de usuario
+                    el usuario.
+                    <br><br>
+                    Mi enfoque se centra en la creación de experiencias de usuario
                     que sean fáciles de usar y visualmente atractivas, con el objetivo de
                     mejorar la interacción y satisfacción del usuario con el sitio web.
                 </p>
@@ -107,9 +109,9 @@
         </div>
         <div id="about"></div>
     </section>
-    <!-- S O B R E - M I-->
-    <header>
-        <section class="about" >
+    <header class="about_skills">
+        <!-- S O B R E - M I-->
+        <section class="about">
             <div class="container flex items-centre">
 
                 <div class="right flex-1">
@@ -146,61 +148,58 @@
         <!-- H A B I L I D A D E S -->
         <div id="skills"></div>
         <section class="skills">
-            
+
             <div class="container">
                 <h1 class="skills-head">Habilidades</h1><br>
                 <div class="card-grid">
-                    <!------------------------------------>
+
                     <div class="card">
-                        <img height="50px" src="src/img_card.jpg" alt="">
-                        <h2> LENGUAJES </h2>
-                        <p> Comence aprendiendo a programar en Java, de ahí comense a
-                            explorar mas el mundo de la programación aprendiendo mas
-                            lenguajes por cuenta propia.
-                        </p>
+                        <p class="emoji">&#x1F4BB;</p>
+                        <h2> Lenguajes de programacion (DSL y GPL) </h2><br>
                         <p> Cuento con experiencia en los sigientes lenguajes: </p>
-                        <ul class="learn">
-                            <li>Java</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                        </ul>
-                        <p class="rutaActual"> Actual ruta de aprendizaje: </p>
-                        <ul class="learning">
-                            <li>Lenguaje: JavaScript</li>
-                            <li>Framework: Vue</li>
-                        </ul>
+                        <br>
+                        <div>
+                            <a href="https://skillicons.dev" rel="nofollow">
+                                <img src="https://camo.githubusercontent.com/d944705acb40ba5fd7af8b2ccec3f220fe27144a1c3be0336593b8d6f2c8952a/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d6a6176612c68746d6c2c6373732c626f6f747374726170267065726c696e653d36"
+                                    alt="dsl-gpl"
+                                    data-canonical-src="https://skillicons.dev/icons?i=java,html,css,bootstrap&amp;perline=6"
+                                    style="max-width: 100%;">
+                            </a>
+                        </div>
                     </div>
-                    <!------------------------------------>
+
                     <div class="card">
-                        <img height="50px" src="src/img_card.jpg" alt="">
-                        <h2> FRAMEWORKS </h2>
-                        <p> Decidí comenzar mi aprendizaje de frameworks utilizando Vue
-                            como mi primera opción, y aunque todavía estoy en proceso
-                            de aprendizaje, he estado trabajando constantemente para mejorar
-                            mis habilidades. <br><br>
-                            Aunque Vue fue el primer framework que decidi aprender, sé que no
-                            es necesario limitarse a un solo framework. A medida que me
-                            familiarice con Vue, podres explorar otros frameworks populares
-                            como React o Angular.
-                        </p>
+                        <p class="emoji">&#x2699;</p>
+                        <h2> Software </h2><br>
+                        <p> He trabajado y tengo experiencia en el uso de estas herramientas
+                            para crear y diseñar diversos tipos de proyectos visuales. </p>
+                        <br>
+                        <div>
+                            <a href="https://skillicons.dev" rel="nofollow">
+                                <img src="https://camo.githubusercontent.com/068df5d1071fc902c9f9dc555647fd4e33d0050f8ba8c9d1e6fd47e7c6d9d112/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d7673636f64652c6669676d612c7864267065726c696e653d36"
+                                    alt="software"
+                                    data-canonical-src="https://skillicons.dev/icons?i=vscode,figma,xd&amp;perline=6"
+                                    style="max-width: 100%;">
+                            </a>
+                        </div>
                     </div>
-                    <!------------------------------------>
+
                     <div class="card">
-                        <img height="50px" src="src/img_card.jpg" alt="">
-                        <h2> DISEÑO </h2>
-                        <p> Tengo habilidades y conocimientos en el uso de las aplicaciones de
-                            diseño gráfico, específicamente en:
-                        </p>
-                        <ul class="learning">
-                            <li>Figma</li>
-                            <li>Adobe Photoshop</li>
-                            <li>Adobe Illustrator</li>
-                        </ul>
+                        <p class="emoji">&#x1F4DA;</p>
+                        <h2> Actual ruta de aprendizaje </h2><br>
                         <p>
-                            He trabajado y tengo experiencia en el uso de estas herramientas
-                            para crear y diseñar diversos tipos de proyectos visuales, tales
-                            como diseños de logotipos y diseño de interfaces de usuario.
+                            He trabajado poco con estas herramientas y
+                            me gustaria aprender a manejarlas mejor.
                         </p>
+                        <br>
+                        <div>
+                            <a href="https://skillicons.dev" rel="nofollow">
+                                <img src="https://camo.githubusercontent.com/58b3c1fb22aa79c970a313c0f7ddc5738df82539258abe69ac295905448c5543/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d61692c70732c6a732c7675652c706870267065726c696e653d36"
+                                    alt="learn-learning"
+                                    data-canonical-src="https://skillicons.dev/icons?i=ai,ps,js,vue,php&amp;perline=6"
+                                    style="max-width: 100%;">
+                            </a>
+                        </div>
                     </div>
 
                 </div>
@@ -208,7 +207,65 @@
 
         </section>
     </header>
+    <!-- P R O Y E C T O S -->
+    <div id="projects"></div>
+    <section class="projects">
+        <div class="">
+            <h1>Algunos <span>proyectos</span> en los que eh trabajado </h1>
+            <br>
+            <div class="card-grid doted-grid ">
 
+                <div class="card doted">
+                    <a class="project" onclick="window.open('https://verdia.netlify.app/', '_blank');">
+                        <img src="https://camo.githubusercontent.com/1bff9e08944d7ab8c731b262b9142cf9be37d5d7284db822b3bd4331835b23ce/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f70696e2f3f757365726e616d653d42696d6f7269343034267265706f3d7665726469612d73637265656e2d616e616c6973797326626f726465725f636f6c6f723d3746334642462662675f636f6c6f723d304431313137267469746c655f636f6c6f723d43394431443926746578745f636f6c6f723d3842393439452669636f6e5f636f6c6f723d374633464246"
+                            alt="VerdIA"
+                            data-canonical-src="https://github-readme-stats.vercel.app/api/pin/?username=Bimori404&amp;repo=verdia-screen-analisys&amp;border_color=7F3FBF&amp;bg_color=0D1117&amp;title_color=C9D1D9&amp;text_color=8B949E&amp;icon_color=7F3FBF">
+                    </a><br>
+                    <a class="project" onclick="window.open('https://bin-go.vercel.app', '_blank');">
+                        <img src="https://camo.githubusercontent.com/3140d291aca8fc5323509a83c7f7a56523b191b56572d81492f6e3b51b09fec8/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f70696e2f3f757365726e616d653d42696d6f7269343034267265706f3d42696e476f26626f726465725f636f6c6f723d3746334642462662675f636f6c6f723d304431313137267469746c655f636f6c6f723d43394431443926746578745f636f6c6f723d3842393439452669636f6e5f636f6c6f723d374633464246"
+                            alt="Bin-Go"
+                            data-canonical-src="https://github-readme-stats.vercel.app/api/pin/?username=Bimori404&amp;repo=BinGo&amp;border_color=7F3FBF&amp;bg_color=0D1117&amp;title_color=C9D1D9&amp;text_color=8B949E&amp;icon_color=7F3FBF">
+                    </a><br>
+                    <a class="project"
+                        onclick="window.open('https://github.com/Bimori404/GeneradorDeNumerosAleatorios', '_blank');">
+                        <img
+                            src="https://camo.githubusercontent.com/83c868250f48e8668380bd44e1f2ffa4f797f3754a5a569e2db872e461f353a4/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f70696e2f3f757365726e616d653d42696d6f7269343034267265706f3d47656e657261646f7244654e756d65726f73416c6561746f72696f7326626f726465725f636f6c6f723d3746334642462662675f636f6c6f723d304431313137267469746c655f636f6c6f723d43394431443926746578745f636f6c6f723d3842393439452669636f6e5f636f6c6f723d374633464246">
+                    </a>
+                </div>
+
+                <div class="card doted">
+                    <a class="project" onclick="window.open('https://floricienta.netlify.app/', '_blank');">
+                        <img
+                            src="https://camo.githubusercontent.com/8eb76a26da8669001385ac2d84a4775ea41df3a39826e930d7e75c8e539973f6/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f70696e2f3f757365726e616d653d42696d6f7269343034267265706f3d59656c6c6f77466c6f7765727326626f726465725f636f6c6f723d3746334642462662675f636f6c6f723d304431313137267469746c655f636f6c6f723d43394431443926746578745f636f6c6f723d3842393439452669636f6e5f636f6c6f723d374633464246">
+                    </a><br>
+                    <a class="project"
+                        onclick="window.open('https://github.com/Bimori404/sistema-experto-prolog', '_blank');">
+                        <img src="https://camo.githubusercontent.com/4499517155b5d31b79e395b2d839c7426d29ddb1d4eebc664266cf155f1ca5d8/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f70696e2f3f757365726e616d653d42696d6f7269343034267265706f3d73697374656d612d6578706572746f2d70726f6c6f6726626f726465725f636f6c6f723d3746334642462662675f636f6c6f723d304431313137267469746c655f636f6c6f723d43394431443926746578745f636f6c6f723d3842393439452669636f6e5f636f6c6f723d374633464246"
+                            alt="Test Vocacional - Sistema Experto"
+                            data-canonical-src="https://github-readme-stats.vercel.app/api/pin/?username=Bimori404&amp;repo=sistema-experto-prolog&amp;border_color=7F3FBF&amp;bg_color=0D1117&amp;title_color=C9D1D9&amp;text_color=8B949E&amp;icon_color=7F3FBF">
+                    </a><br>
+                </div>
+
+                <div class="card doted">
+                    <a class="project"
+                        onclick="window.open('https://operaciones-con-conjuntos.netlify.app', '_blank');">
+                        <img
+                            src="https://camo.githubusercontent.com/84e314d9da5d72215a5e206249925d11998dbb34bcfc0c0363cb646a09151f0a/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f70696e2f3f757365726e616d653d42696d6f7269343034267265706f3d4f7065726163696f6e6573436f6e436f6e6a756e746f7326626f726465725f636f6c6f723d3746334642462662675f636f6c6f723d304431313137267469746c655f636f6c6f723d43394431443926746578745f636f6c6f723d3842393439452669636f6e5f636f6c6f723d374633464246">
+                    </a><br>
+                    <a class="project"
+                        onclick="window.open('https://github.com/Bimori404/EvaluacionExpresionesPROLOG', '_blank');">
+                        <img
+                            src="https://camo.githubusercontent.com/fa5f77cd29bd09b6d6982f9b9e931c7a376b76882c92b321ea3e107ab7e34cb4/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f70696e2f3f757365726e616d653d42696d6f7269343034267265706f3d4576616c756163696f6e457870726573696f6e657350524f4c4f4726626f726465725f636f6c6f723d3746334642462662675f636f6c6f723d304431313137267469746c655f636f6c6f723d43394431443926746578745f636f6c6f723d3842393439452669636f6e5f636f6c6f723d374633464246">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
