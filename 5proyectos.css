@@ -12,6 +12,15 @@ section.projects h1 span {
     color: var(--primary);
 }
 
+section.projects
+div.container {
+    background-color: var(--white);
+}
+section.projects
+.doted-grid {
+    background-color: var(--white);
+}
+
 /* -- */
 
 .doted-grid {
