@@ -23,20 +23,20 @@ section.projects
 
 /* -- */
 
-.doted-grid {
-    
+.projects .container .doted-grid {
     /* background-color: blueviolet; */
 }
 .doted {
     /* background-color: aqua; */
 }
 
-.doted img {
+.doted .item-svg {
     max-width: 115%;
+    margin-left: -1.5em;
 }
 
 /* -- */
-
+/* 
 a.project {
     color: #000;
     position: relative;
@@ -57,4 +57,4 @@ a.project::before {
 a.project:hover::before {
     transform: scaleX(1);
     transform-origin: left;
-}
+} */

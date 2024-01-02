@@ -200,8 +200,14 @@ section.projects {
         column-gap: 1em;
     }
 
-    div.card p {
+    .skills div.container.container-skills {
+        /* background-color: blueviolet; */
+        margin-left: -3rem;
+    }
+
+    div.card.card-skils {
         text-align: justify;
+        /* background-color: brown; */
     }
 
     div.card p.rutaActual {
@@ -228,9 +234,9 @@ section.projects {
 
     .doted {
         /* background-color: aqua; */
-    }
+    } */
 
-    .doted-grid {
+    .doted-grid .doted .item-svg {
         justify-content: center;
         align-items: center;
         /* background-color: blueviolet; */
@@ -238,9 +244,13 @@ section.projects {
 
     .doted-grid .doted {
         margin-bottom: -33px;
+        /* background-color: aqua; */
     }
-    .doted img {
-        max-width: 22em;
+
+    .doted .item-svg {
+        max-width: 800%;
+        margin-left: -7.5em;
+        
     }
 
     /*-------------------------------------------------------*/
