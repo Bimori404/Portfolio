@@ -48,12 +48,12 @@ export default {
       </TheWindow>
       <!-- R E D E S - E - I M A G E N -->
       <div class="flex flex-col">
-        <TheWindow class="sm:w-56" color="senary" title="¿?">
+        <TheWindow class="sm:w-56 hidden md:block" color="senary" title="¿?">
           <div>
             <img src="./assets/rndm/sago.png" alt="Imagen de perfil">
           </div>
         </TheWindow>
-        <br>
+        <br class="hidden md:block">
         <!-- R E D E S -->
         <TheWindow class="sm:w-56" color="octonary" title="redes">
           <br>
