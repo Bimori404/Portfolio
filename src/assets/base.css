@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #313131;
+  --color-secondary: #fb60f4;
+  --color-tertiary: #60fbe1;
+  --color-quaternary: #fb6060;
+  --color-quinary: #fbee60;
+  --color-senary: #0c0c0c;
+  --color-septenary: #a260fb;
+  --color-octonary: #ffffff;
+  /* --color-nonary: #0c0c0c; */
+  /* --color-denary: #fff; */
+}
+
+.doted {
+  max-width: 200%;
+}
+
+.doted .item-svg {
+  max-width: 100%;
+  margin-bottom: -33px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, .5fr);
+  column-gap: 0;
+  /*  */
+  max-width: 34%;
+}
