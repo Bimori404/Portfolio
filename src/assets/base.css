@@ -5,49 +5,33 @@
 :root {
   --color-primary: #313131;
   /* -- */
-  --color-secondary: #60fbe1;
-  --color-tertiary: #fb60f4;
+  --color-secondary: #054855;
+  --color-tertiary: #9C92AC;
   /* -- */
-  --color-quaternary: #FB6060;
+  --color-quaternary: #3bd1b8;
   --color-quinary: #0C0C0C;
-  --color-senary: #ffffff;
-  --color-septenary: #cf60fb;
+  --color-senary: #bfc2ca;
+  --color-septenary: #fb60f4;
+  /* -- */
+  --color-octonary: #28454B ;
+  --color-nonary: #ececec;
   
   /*
-  -color-octonary: ;
-  --color-nonary: ;
   */
 
-/*   
-  --color-background: #313131;
-  ----
+  
+  /* --color-background: #313131;
+  
   --color-underlined: #60fbe1;
-  ----
+
   --color-first-window: #ffffff;
   --color-second-window: #FB6060;
   --color-third-window: #0C0C0C;
   --color-fourth-window: #ffffff;
   --color-fifth-window: #fb60f4;
   --color-sixth-window: #60fbe1;
-  ----
+  
   --color-first-icon: #60fbe1;
-  --color-second-icon: #fb60f4;
-*/
-}
+  --color-second-icon: #fb60f4; */
 
-.doted {
-  max-width: 200%;
-}
-
-.doted .item-svg {
-  max-width: 100%;
-  margin-bottom: -33px;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(1, .5fr);
-  column-gap: 0;
-  /*  */
-  max-width: 34%;
 }

@@ -11,9 +11,9 @@ export default {
 <template>
   <main class="sm:pt-5 relative max-w-screen-md mx-auto p-5">
     <!-- P R E S E N T A C I O N -->
-    <TheWindow class="mb-3" title="presentacion" color="quaternary" :decorations="3">
+    <TheWindow class="mb-3" title="presentacion" color="senary">
       <div class="font-black text-5xl content-center">
-        Hola, me presento soy <span class="bg-[var(--color-secondary)]">Samuel</span>
+        Hola, me presento soy <span class="text-[var(--color-secondary)]"> <br> J. Samuel P. Gonzalez</span>
       </div><br>
       <div class="font-bold text-lg mb-2">
         Soy un apasionado del diseño y desarrollo, con habilidades y experiencia en la creación de sitios web que son
@@ -28,7 +28,7 @@ export default {
     </TheWindow>
     <!-- S O B R E - M I -->
     <div class="flex max-sm:flex-col gap-3 mb-3">
-      <TheWindow class="sm:basis-2/3" :decorations="2" color="senary" title="sobre_mi">
+      <TheWindow class="sm:basis-2/3" color="senary" title="sobre_mi">
         <div class="font-bold text-md mb-2">
           <div>
             Actualmente estoy estudiando la carrera de Ingeniería en Sistemas Computacionales.
@@ -48,7 +48,7 @@ export default {
       </TheWindow>
       <!-- R E D E S - E - I M A G E N -->
       <div class="flex flex-col">
-        <TheWindow class="sm:w-56 hidden md:block" color="quinary" title="¿?">
+        <TheWindow class="sm:w-56 hidden md:block" color="quinary" title="¿yo?">
           <div>
             <img src="./assets/rndm/sago.png" alt="Imagen de perfil">
           </div>
@@ -60,21 +60,21 @@ export default {
           <div class="flex max-sm:flex-col justify-center items-center gap-3">
             <div class="flex flex-wrap justify-center text-2xl gap-2">
               <!-- G I T H U B -->
-              <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-tertiary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100"
+              <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-octonary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100"
                 href="https://github.com/Bimori404" target="_blank">
-                <font-awesome-icon icon="fa-brands fa-github" />
+                <font-awesome-icon icon="fa-brands fa-github" style="color: #ececec;" />
               </a>
               <!-- C V -->
-              <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-secondary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100" alt="Curriculum Vitae"
+              <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-octonary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100" alt="Curriculum Vitae"
                 href="https://docs.google.com/document/d/1MRvqrTY27DCsa9qNB0ZTYnSoAhzfBj8H/edit?usp=sharing&ouid=115285703923727061955&rtpof=true&sd=true" target="_blank">
 
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 448 512"><path fill="#ececec" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
                 </svg>
               </a>
               <!-- L I N K E D I N -->
-              <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-tertiary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100"
+              <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-octonary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100"
                 href="https://www.linkedin.com/in/jsamuelpgonzalez/" target="_blank">
-                <font-awesome-icon icon="fa-brands fa-linkedin" />
+                <font-awesome-icon icon="fa-brands fa-linkedin" style="color: #ececec;"/>
               </a>
             </div>
           </div>
@@ -85,7 +85,7 @@ export default {
     <!-- H A B I L I D A D E S -->
     <div class="flex max-sm:flex-col gap-3 mb-3 text-center">
       <!-- L E N G U A J E S -->
-      <TheWindow color="tertiary" class="sm:basis-1/3" title="lenguajes de programacion (DSL y GPL)">
+      <TheWindow color="senary" class="sm:basis-1/3" title="lenguajes de programacion (DSL y GPL)">
         <div class="font-bold text-sm mb-2">
           <p>
             Cuento con experiencia en los sigientes lenguajes:
@@ -124,7 +124,7 @@ export default {
         </div>
       </TheWindow>
       <!-- S O F T W A R E -->
-      <TheWindow color="tertiary" class="sm:basis-1/3" title="software">
+      <TheWindow color="senary" class="sm:basis-1/3" title="software">
         <div class="font-bold text-sm mb-2">
           <p>
             He trabajado y tengo experiencia en el uso de estas herramientas para crear y diseñar diversos tipos de
@@ -150,7 +150,7 @@ export default {
         </div>
       </TheWindow>
       <!-- R U T A - A C T U A L -->
-      <TheWindow color="tertiary" class="sm:basis-1/3" title="actual ruta de aprendizaje">
+      <TheWindow color="senary" class="sm:basis-1/3" title="actual ruta de aprendizaje">
         <div class="font-bold text-sm mb-2">
           <p>
             He trabajado poco con estas herramientas y me gustaria aprender a manejarlas mejor.
@@ -190,10 +190,10 @@ export default {
       </TheWindow>
     </div>
     <!-- P R O Y E C T O S -->
-    <TheWindow class="mb-3" title="proyectos" color="secondary" :decorations="3">
+    <TheWindow class="mb-3" title="proyectos" color="senary">
       <div class="font-bold text-lg mb-2">
 
-        <a class="flex items-center justify-center w-auto h-auto text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl"
+        <a class="flex items-center justify-center w-auto h-auto text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl bg-[var(--color-octonary)] text-[var(--color-nonary)]"
           href="https://github.com/Bimori404" target="_blank">
           <i>*- E N - C O N S T R U C C I O N -*</i>
         </a>
@@ -557,14 +557,13 @@ export default {
       </div>
     </TheWindow>
   </main>
-  <!--   
-    <div class="bg-[var(--color-primary)]">1</div>
+    <!-- <div class="bg-[var(--color-primary)]">1</div>
     <div class="bg-[var(--color-secondary)]">2</div>
     <div class="bg-[var(--color-tertiary)]">3</div>
     <div class="bg-[var(--color-quaternary)]">4</div>
     <div class="bg-[var(--color-quinary)]">5</div>
     <div class="bg-[var(--color-senary)]">6</div>
     <div class="bg-[var(--color-septenary)]">7</div>
-    <div class="bg-[var(--color-octonary)]">8</div>
--->
+    <div class="bg-[var(--color-octonary)]">8</div> -->
+
 </template>
