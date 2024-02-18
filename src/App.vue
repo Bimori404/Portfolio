@@ -11,16 +11,14 @@ export default {
 <template>
   <main class="sm:pt-5 relative max-w-screen-md mx-auto p-5">
     <!-- P R E S E N T A C I O N -->
-    <TheWindow class="mb-3" title="presentacion" color="senary">
+    <TheWindow class="mb-3" title="- P R E S E N T A C I O N -" color="senary">
       <div class="font-black text-5xl content-center">
         Hola, me presento soy <span class="text-[var(--color-secondary)]"> <br> J. Samuel P. Gonzalez</span>
       </div><br>
       <div class="font-bold text-lg mb-2">
-        Soy un apasionado del diseño y desarrollo, con habilidades y experiencia en la creación de sitios web que son
-        tanto intuitivos como atractivos para el usuario.
+        Soy un apasionado del diseño y desarrollo, con habilidades y experiencia en la creación de sitios web que son tanto intuitivos como atractivos para el usuario.
         <br><br>
-        Mi enfoque se centra en la creación de experiencias de usuario que sean fáciles de usar y visualmente tractivas,
-        con el objetivo de mejorar la interacción y satisfacción del usuario con el sitio web.
+        Mi enfoque se centra en la creación de experiencias de usuario que sean fáciles de usar y visualmente tractivas, con el objetivo de mejorar la interacción y satisfacción del usuario con el sitio web.
 
         <i>*insert here some lorem
           ipsum*</i>
@@ -28,20 +26,16 @@ export default {
     </TheWindow>
     <!-- S O B R E - M I -->
     <div class="flex max-sm:flex-col gap-3 mb-3">
-      <TheWindow class="sm:basis-2/3" color="senary" title="sobre_mi">
+      <TheWindow class="sm:basis-2/3" color="senary" title="- S O B R E - M I -">
         <div class="font-bold text-md mb-2">
           <div>
             Actualmente estoy estudiando la carrera de Ingeniería en Sistemas Computacionales.
           </div><br>
           <div>
-            Mi enfoque en el diseño y desarrollo web es crear interfaces limpias y atractivas que hagan que los
-            usuarios se sientan cómodos y puedan navegar fácilmente. Lo que permite una experiencia de usuario óptima,
-            trabajando con HTML, CSS y JavaScript, lo que me permite crear soluciones técnicas y funcionales.
+            Mi enfoque en el diseño y desarrollo web es crear interfaces limpias y atractivas que hagan que los usuarios se sientan cómodos y puedan navegar fácilmente. Lo que permite una experiencia de usuario óptima, trabajando con HTML, CSS y JavaScript, lo que me permite crear soluciones técnicas y funcionales.
           </div><br>
           <div>
-            Cuento con un humor algo ácido y una personalidad muy carismática. Me considero una persona capaz y
-            proactiva, con mucho interés en aprender cada día más, me encanta interactuar con la gente y trabajar en
-            equipo.
+            Cuento con un humor algo ácido y una personalidad muy carismática. Me considero una persona capaz y proactiva, con mucho interés en aprender cada día más, me encanta interactuar con la gente y trabajar en equipo.
           </div>
 
         </div>
@@ -55,7 +49,7 @@ export default {
         </TheWindow>
         <br class="hidden md:block">
         <!-- R E D E S -->
-        <TheWindow class="sm:w-56" color="senary" title="redes">
+        <TheWindow class="sm:w-56" color="senary" title="- R E D E S -">
           <br>
           <div class="flex max-sm:flex-col justify-center items-center gap-3">
             <div class="flex flex-wrap justify-center text-2xl gap-2">
@@ -85,10 +79,10 @@ export default {
     <!-- H A B I L I D A D E S -->
     <div class="flex max-sm:flex-col gap-3 mb-3 text-center">
       <!-- L E N G U A J E S -->
-      <TheWindow color="senary" class="sm:basis-1/3" title="lenguajes de programacion (DSL y GPL)">
+      <TheWindow color="senary" class="sm:basis-1/3" title="- L E N G U A J E S - D E - P R O G R A M A C I O N - (DSL y GPL) -">
         <div class="font-bold text-sm mb-2">
           <p>
-            Cuento con experiencia en los sigientes lenguajes:
+            Cuento con experiencia en los siguientes lenguajes:
           </p>
           <br>
           <div class="flex max-sm:flex-col justify-center items-center gap-3">
@@ -124,11 +118,10 @@ export default {
         </div>
       </TheWindow>
       <!-- S O F T W A R E -->
-      <TheWindow color="senary" class="sm:basis-1/3" title="software">
+      <TheWindow color="senary" class="sm:basis-1/3" title="- S O F T W A R E -">
         <div class="font-bold text-sm mb-2">
           <p>
-            He trabajado y tengo experiencia en el uso de estas herramientas para crear y diseñar diversos tipos de
-            proyectos visuales.
+            He trabajado y tengo experiencia en el uso de estas herramientas para crear y diseñar diversos tipos de proyectos visuales.
           </p>
           <br>
           <div class="flex max-sm:flex-col justify-center items-center gap-3">
@@ -150,7 +143,7 @@ export default {
         </div>
       </TheWindow>
       <!-- R U T A - A C T U A L -->
-      <TheWindow color="senary" class="sm:basis-1/3" title="actual ruta de aprendizaje">
+      <TheWindow color="senary" class="sm:basis-1/3" title="- A C T U A L - R U TA - D E - A P R E N  D I Z A J E -">
         <div class="font-bold text-sm mb-2">
           <p>
             He trabajado poco con estas herramientas y me gustaria aprender a manejarlas mejor.
@@ -190,7 +183,7 @@ export default {
       </TheWindow>
     </div>
     <!-- P R O Y E C T O S -->
-    <TheWindow class="mb-3" title="proyectos" color="senary">
+    <TheWindow class="mb-3" title="- P R O Y E C T O S -" color="senary">
       <div class="font-bold text-lg mb-2">
 
         <a class="flex items-center justify-center w-auto h-auto text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl bg-[var(--color-octonary)] text-[var(--color-nonary)]"
