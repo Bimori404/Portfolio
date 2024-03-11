@@ -246,7 +246,7 @@ export default {
                 <div class="px-6 py-4">
                   <div class="font-bold text-xl mb-2">Bin-Go</div>
                   <p class="text-gray-700 text-base">
-                    Sistema de gestión integral web de residuos basado en IoT para controlar, manejar y optimizar la
+                    Sistema web de gestión integral de residuos basado en IoT para controlar, manejar y optimizar la
                     disposición de residuos.
                   </p>
                 </div>
