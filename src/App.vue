@@ -214,7 +214,9 @@ export default {
                     de Fundamentos de Programación.
                   </p>
                 </div>
-                <div class="px-6 pt-4 pb-2">
+                <!--  -->
+                <div class="px-6 pt-4">
+                  <div class="font-bold text-gray-800 text-sm mb-2">Tecnologias</div>
                   <span
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#html</span>
                   <span
@@ -223,6 +225,15 @@ export default {
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#bootstrap</span>
                   <span
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#javascript</span>
+                </div>
+                <!--  -->
+                <div class="px-6 pb-2">
+                  <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
+                  <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Diseñador
+                    UX/UI</span>
+                  <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Frontend</span>
                 </div>
               </div>
             </div>
@@ -239,13 +250,21 @@ export default {
                     disposición de residuos.
                   </p>
                 </div>
+                <!--  -->
                 <div class="px-6 pt-4 pb-2">
+                  <div class="font-bold text-gray-800 text-sm mb-2">Tecnologias</div>
                   <span
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#react</span>
                   <span
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#css</span>
                   <span
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#javascript</span>
+                </div>
+                <!--  -->
+                <div class="px-6 pb-2">
+                  <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
+                  <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Frontend</span>
                 </div>
               </div>
             </div>
@@ -266,13 +285,21 @@ export default {
                     el cultivo de caña de azúcar.
                   </p>
                 </div>
+                <!--  -->
                 <div class="px-6 pt-4 pb-2">
+                  <div class="font-bold text-gray-800 text-sm mb-2">Tecnologias</div>
                   <span
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#html</span>
                   <span
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#css</span>
                   <span
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#javascript</span>
+                </div>
+                <!--  -->
+                <div class="px-6 pb-2">
+                  <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
+                  <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Frontend</span>
                 </div>
               </div>
             </div>
