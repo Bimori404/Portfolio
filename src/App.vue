@@ -15,7 +15,7 @@ export default {
       <div class="font-black text-5xl content-center">
         Hola, me presento soy <span class="text-[var(--color-secondary)]"> <br> J. Samuel P. Gonzalez</span>
       </div><br>
-      <div class="font-bold text-lg mb-2 mx-2">
+      <div class="font-bold text-lg mb-2 mx-4">
         Soy un apasionado del diseño y desarrollo, con habilidades y experiencia en la creación de sitios web que son
         tanto intuitivos como atractivos para el usuario.
         <br><br>
@@ -30,7 +30,7 @@ export default {
     <!-- S O B R E - M I -->
     <div class="flex max-sm:flex-col gap-3 mb-3">
       <TheWindow class="sm:basis-2/3" color="senary" title="- S O B R E - M Í -">
-        <div class="font-bold text-md mb-2 mx-2">
+        <div class="font-bold text-md mx-4">
           <div>
             Actualmente estoy estudiando la carrera de Ingeniería en Sistemas Computacionales.
           </div><br>
