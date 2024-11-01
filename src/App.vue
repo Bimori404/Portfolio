@@ -12,7 +12,7 @@ export default {
   <main class="sm:pt-5 relative max-w-screen-md mx-auto p-5">
     <!-- P R E S E N T A C I O N -->
     <TheWindow class="mb-3" title="- P R E S E N T A C I Ó N -" color="senary">
-      <div class="font-black text-5xl content-center">
+      <div class="font-black text-5xl content-center mx-4">
         Hola, me presento soy <span class="text-[var(--color-secondary)]"> <br> J. Samuel P. Gonzalez</span>
       </div><br>
       <div class="font-bold text-lg mb-2 mx-4">
