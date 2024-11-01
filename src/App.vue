@@ -230,8 +230,8 @@ export default {
                 <div class="px-6 pb-2">
                   <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
                   <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Diseñador
-                    UX/UI</span>
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#UX/UI
+                    Designer</span>
                   <span
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Frontend</span>
                 </div>
@@ -298,6 +298,9 @@ export default {
                   <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
                   <span
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Frontend</span>
+                  <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Graphic
+                    Designer</span>
                 </div>
               </div>
             </div>
