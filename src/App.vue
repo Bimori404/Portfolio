@@ -11,7 +11,7 @@ export default {
 <template>
   <main class="sm:pt-5 relative max-w-screen-md mx-auto p-5">
     <!-- P R E S E N T A C I O N -->
-    <TheWindow class="mb-3" title="- P R E S E N T A C I O N -" color="senary">
+    <TheWindow class="mb-3" title="- P R E S E N T A C I Ó N -" color="senary">
       <div class="font-black text-5xl content-center">
         Hola, me presento soy <span class="text-[var(--color-secondary)]"> <br> J. Samuel P. Gonzalez</span>
       </div><br>
@@ -19,7 +19,8 @@ export default {
         Soy un apasionado del diseño y desarrollo, con habilidades y experiencia en la creación de sitios web que son
         tanto intuitivos como atractivos para el usuario.
         <br><br>
-        Mi enfoque se centra en la creación de experiencias de usuario que sean fáciles de usar y visualmente tractivas,
+        Mi enfoque se centra en la creación de experiencias de usuario que sean fáciles de usar y visualmente
+        atractivas,
         con el objetivo de mejorar la interacción y satisfacción del usuario con el sitio web.
 
         <i>*insert here some lorem
@@ -28,7 +29,7 @@ export default {
     </TheWindow>
     <!-- S O B R E - M I -->
     <div class="flex max-sm:flex-col gap-3 mb-3">
-      <TheWindow class="sm:basis-2/3" color="senary" title="- S O B R E - M I -">
+      <TheWindow class="sm:basis-2/3" color="senary" title="- S O B R E - M Í -">
         <div class="font-bold text-md mb-2">
           <div>
             Actualmente estoy estudiando la carrera de Ingeniería en Sistemas Computacionales.
@@ -203,8 +204,7 @@ export default {
           <div class="max-w-sm rounded-b-xl">
             <!-- FUNDAPROG -->
             <div class="max-w-sm rounded-b-xl pb-3">
-              <div
-                class="shadow-2xl rounded-xl hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100 bg-[var(--color-senary)]">
+              <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
                 <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="./assets/rndm/fundaprog.png"
                   alt="Sunset in the mountains">
                 <div class="px-6 py-4">
@@ -215,7 +215,7 @@ export default {
                   </p>
                 </div>
                 <!--  -->
-                <div class="px-6 pt-4">
+                <!-- <div class="px-6 pt-4">
                   <div class="font-bold text-gray-800 text-sm mb-2">Tecnologias</div>
                   <span
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#html</span>
@@ -225,7 +225,7 @@ export default {
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#bootstrap</span>
                   <span
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#javascript</span>
-                </div>
+                </div> -->
                 <!--  -->
                 <div class="px-6 pb-2">
                   <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
@@ -239,8 +239,7 @@ export default {
             </div>
             <!-- BIN-GO -->
             <div class="max-w-sm rounded-b-xl pb-3">
-              <div
-                class="shadow-2xl rounded-xl hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100 bg-[var(--color-senary)]">
+              <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
                 <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="./assets/rndm/bin-go.png"
                   alt="Sunset in the mountains">
                 <div class="px-6 py-4">
@@ -251,7 +250,7 @@ export default {
                   </p>
                 </div>
                 <!--  -->
-                <div class="px-6 pt-4 pb-2">
+                <!-- <div class="px-6 pt-4 pb-2">
                   <div class="font-bold text-gray-800 text-sm mb-2">Tecnologias</div>
                   <span
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#react</span>
@@ -259,7 +258,7 @@ export default {
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#css</span>
                   <span
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#javascript</span>
-                </div>
+                </div> -->
                 <!--  -->
                 <div class="px-6 pb-2">
                   <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
@@ -274,8 +273,7 @@ export default {
           <div class="max-w-sm rounded-b-xl">
             <!-- VERDIA -->
             <div class="max-w-sm rounded-b-xl pb-3">
-              <div
-                class="shadow-2xl rounded-xl hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100 bg-[var(--color-senary)]">
+              <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
                 <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="./assets/rndm/verdia.png"
                   alt="Sunset in the mountains">
                 <div class="px-6 py-4">
@@ -286,7 +284,7 @@ export default {
                   </p>
                 </div>
                 <!--  -->
-                <div class="px-6 pt-4 pb-2">
+                <!-- <div class="px-6 pt-4 pb-2">
                   <div class="font-bold text-gray-800 text-sm mb-2">Tecnologias</div>
                   <span
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#html</span>
@@ -294,7 +292,7 @@ export default {
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#css</span>
                   <span
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#javascript</span>
-                </div>
+                </div> -->
                 <!--  -->
                 <div class="px-6 pb-2">
                   <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
@@ -304,9 +302,9 @@ export default {
               </div>
             </div>
             <!-- FLORICIENTA -->
-            <div class="max-w-sm rounded-b-xlS pb-3">
+            <!-- <div class="max-w-sm rounded-b-xlS pb-3">
               <div
-                class="shadow-2xl rounded-xl hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100 bg-[var(--color-senary)]">
+                class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
                 <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="./assets/rndm/floricienta.png"
                   alt="Sunset in the mountains">
                 <div class="px-6 py-4">
@@ -323,11 +321,10 @@ export default {
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#css</span>
                 </div>
               </div>
-            </div>
+            </div> -->
             <!-- PRODEA - TECTRAMITES -->
             <div class="max-w-sm rounded-b-xl pb-3">
-              <div
-                class="shadow-2xl rounded-xl hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100 bg-[var(--color-senary)]">
+              <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
                 <img class="w-full rounded-t-[10px] rounded-b-[3px]"
                   src="./assets/rndm/diseño-figma-PRODEA(Proceso de Documentación Escolar y Académica).png"
                   alt="Sunset in the mountains">
@@ -339,9 +336,11 @@ export default {
                     eficiente y conveniente para estudiantes y instituciones educativas.
                   </p>
                 </div>
-                <div class="px-6 pt-4 pb-2">
+                <div class="px-6 pb-2">
+                  <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
                   <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#figma</span>
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Diseñador
+                    UX/UI</span>
                 </div>
               </div>
             </div>
@@ -352,11 +351,11 @@ export default {
         <br>
         <br>
         <!-- B O T O N -->
-        <a class="flex items-center justify-center w-auto h-auto text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl bg-[var(--color-octonary)] text-[var(--color-nonary)]"
+        <!-- <a class="flex items-center justify-center w-auto h-auto text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl bg-[var(--color-octonary)] text-[var(--color-nonary)]"
           href="https://github.com/Bimori404" target="_blank">
           <i>*- M A S - P R O Y E C T O S -*</i>
         </a>
-        <br>
+        <br> -->
         <!--  -->
       </div>
     </TheWindow>
