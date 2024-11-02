@@ -49,8 +49,8 @@ export default {
       </TheWindow>
       <!-- R E D E S - E - I M A G E N -->
       <div class="flex flex-col">
-        <TheWindow class="sm:w-56 hidden md:block" color="quinary" title="¿yo?">
-          <div>
+        <TheWindow class="sm:w-56 hidden md:block md:" color="quinary" title="¿Yo?">
+          <div class="picture">
             <img src="./assets/rndm/sago.png" alt="Imagen de perfil">
           </div>
         </TheWindow>
@@ -342,8 +342,8 @@ export default {
                 <div class="px-6 pb-2">
                   <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
                   <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Diseñador
-                    UX/UI</span>
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#UX/UI
+                    Designer</span>
                 </div>
               </div>
             </div>

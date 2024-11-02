@@ -39,6 +39,9 @@ body {
   display: none;
 }
 
-
+div.picture img {
+  max-width: 112%;
+  margin: -20px -5px -5px -14px;
+}
 
   /* background-color: #011a1f; */
