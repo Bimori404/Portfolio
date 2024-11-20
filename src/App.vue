@@ -60,30 +60,30 @@ export default {
       {
         id: "MusicSwipe",
         images: [
-          "src/assets/rndm/MusicSwipeLog.png",
-          "src/assets/rndm/MusicSwipeGuest.png",
-          "src/assets/rndm/MusicSwipeSpotifyUser.png",
+          "./src/assets/rndm/MusicSwipeLog.png",
+          "./src/assets/rndm/MusicSwipeGuest.png",
+          "./src/assets/rndm/MusicSwipeSpotifyUser.png",
         ],
       },
       {
         id: "BinGo",
         images: [
-          "src/assets/rndm/bin-go.png",
-          "src/assets/rndm/bin-goModalBin.png",
+          "./src/assets/rndm/bin-go.png",
+          "./src/assets/rndm/bin-goModalBin.png",
         ],
       },
       {
         id: "ControlAcadémico",
         images: [
-          "src/assets/rndm/ControlAcadémicoLogin1.jpg",
-          "src/assets/rndm/ControlAcadémico-HomeStudent.jpg",
-          "src/assets/rndm/ControlAcadémico-ProfileStudent.jpg",
-          "src/assets/rndm/ControlAcadémico-EditProfile.jpg",
+          "./src/assets/rndm/ControlAcadémicoLogin1.jpg",
+          "./src/assets/rndm/ControlAcadémico-HomeStudent.jpg",
+          "./src/assets/rndm/ControlAcadémico-ProfileStudent.jpg",
+          "./src/assets/rndm/ControlAcadémico-EditProfile.jpg",
           
-          "src/assets/rndm/ControlAcadémicoLogin2.jpg",
-          "src/assets/rndm/ControlAcadémico-HomeAdmin.jpg",
-          "src/assets/rndm/ControlAcadémico-DashboardAdmin.jpg",
-          "src/assets/rndm/ControlAcadémico-DashboardAdmin-StudentInforation.jpg",
+          "./src/assets/rndm/ControlAcadémicoLogin2.jpg",
+          "./src/assets/rndm/ControlAcadémico-HomeAdmin.jpg",
+          "./src/assets/rndm/ControlAcadémico-DashboardAdmin.jpg",
+          "./src/assets/rndm/ControlAcadémico-DashboardAdmin-StudentInforation.jpg",
         ],
       },
     ]);
