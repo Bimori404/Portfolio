@@ -1,12 +1,106 @@
 <script>
-import TheWindow from './components/TheWindow.vue';
+import { onMounted, ref } from "vue";
+import TheWindow from "./components/TheWindow.vue";
 
-export default {
-  components: {
-    TheWindow
+class Carousel {
+  constructor(container, images) {
+    this.container = container;
+    this.images = images;
+    this.currentIndex = 0;
+
+    this.render();
+    this.addEventListeners();
+  }
+
+  render() {
+    this.container.innerHTML = `
+      <div class="carousel-wrapper relative overflow-hidden">
+        <div class="carousel-images flex transition-transform duration-500"
+             style="transform: translateX(-${this.currentIndex * 100}%);">
+          ${this.images.map((src) => `<img src="${src}" class="w-full rounded-t-[10px] rounded-b-[3px]" alt="Slide">`).join('')}
+        </div>
+        <button class="carousel-prev absolute top-1/2 left-3 transform -translate-y-1/2 text-white bg-gray-800 bg-opacity-50 p-2 rounded-full">❮</button>
+        <button class="carousel-next absolute top-1/2 right-3 transform -translate-y-1/2 text-white bg-gray-800 bg-opacity-50 p-2 rounded-full">❯</button>
+      </div>
+    `;
+  }
+
+  addEventListeners() {
+    this.container.querySelector(".carousel-prev").addEventListener("click", () => this.prev());
+    this.container.querySelector(".carousel-next").addEventListener("click", () => this.next());
+  }
+
+  next() {
+    if (this.currentIndex < this.images.length - 1) {
+      this.currentIndex++;
+      this.update();
+    }
+  }
+
+  prev() {
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+      this.update();
+    }
+  }
+
+  update() {
+    const imagesContainer = this.container.querySelector(".carousel-images");
+    imagesContainer.style.transform = `translateX(-${this.currentIndex * 100}%)`;
   }
 }
+
+export default {
+  name: "App",
+  components: {
+    TheWindow,
+  },
+  setup() {
+    const carouselData = ref([
+      {
+        id: "MusicSwipe",
+        images: [
+          "src/assets/rndm/MusicSwipeLog.png",
+          "src/assets/rndm/MusicSwipeGuest.png",
+          "src/assets/rndm/MusicSwipeSpotifyUser.png",
+        ],
+      },
+      {
+        id: "BinGo",
+        images: [
+          "src/assets/rndm/bin-go.png",
+          "src/assets/rndm/bin-goModalBin.png",
+        ],
+      },
+      {
+        id: "ControlAcadémico",
+        images: [
+          "src/assets/rndm/ControlAcadémicoLogin1.jpg",
+          "src/assets/rndm/ControlAcadémico-HomeStudent.jpg",
+          "src/assets/rndm/ControlAcadémico-ProfileStudent.jpg",
+          "src/assets/rndm/ControlAcadémico-EditProfile.jpg",
+          
+          "src/assets/rndm/ControlAcadémicoLogin2.jpg",
+          "src/assets/rndm/ControlAcadémico-HomeAdmin.jpg",
+          "src/assets/rndm/ControlAcadémico-DashboardAdmin.jpg",
+          "src/assets/rndm/ControlAcadémico-DashboardAdmin-StudentInforation.jpg",
+        ],
+      },
+    ]);
+
+    onMounted(() => {
+      carouselData.value.forEach(({ id, images }) => {
+        const container = document.querySelector(`#${id}`);
+        new Carousel(container, images);
+      });
+    });
+
+    return { carouselData };
+  },
+};
 </script>
+
+
 
 <template>
   <main class="sm:pt-5 relative max-w-screen-md mx-auto p-5">
@@ -202,11 +296,35 @@ export default {
         <div class="flex flex-col md:flex-row md:space-x-4">
           <!--  -->
           <div class="max-w-sm rounded-b-xl">
+            <!-- CONTROL-ACADEMICO -->
+            <div class="max-w-sm rounded-b-xl pb-3">
+              <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
+                <div id="ControlAcadémico" class="shadow-2xl rounded-xl bg-[var(--color-senary)]">
+                </div>
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2">Sistema de Control Académico</div>
+                  <p class="text-gray-700 text-base">
+                    - Administradores: Pueden visualizar gráficos clave, gestionar boletas, buscar por
+                    filtros, y validar datos (automática o manualmente).
+                    <br>
+                    <!-- - Tutores Academicos: Pueden ver información académica, personal y la consulta de calificaciones
+                    parciales y finales de los alumnos bajo su tutoría.
+                    <br> -->
+                    - Estudiantes: Pueden consultar su información académica, calificaciones y subir documentos
+                    importantes.
+                  </p>
+                </div>
+                <div class="px-6 pb-2">
+                  <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
+                  <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#FullStack</span>
+                </div>
+              </div>
+            </div>
             <!-- FUNDAPROG -->
             <div class="max-w-sm rounded-b-xl pb-3">
               <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
-                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="./assets/rndm/fundaprog.png"
-                  alt="Sunset in the mountains">
+                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="./assets/rndm/fundaprog.png">
                 <div class="px-6 py-4">
                   <div class="font-bold text-xl mb-2">Fundaprog</div>
                   <p class="text-gray-700 text-base">
@@ -214,19 +332,6 @@ export default {
                     de Fundamentos de Programación.
                   </p>
                 </div>
-                <!--  -->
-                <!-- <div class="px-6 pt-4">
-                  <div class="font-bold text-gray-800 text-sm mb-2">Tecnologias</div>
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#html</span>
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#css</span>
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#bootstrap</span>
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#javascript</span>
-                </div> -->
-                <!--  -->
                 <div class="px-6 pb-2">
                   <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
                   <span
@@ -240,8 +345,8 @@ export default {
             <!-- BIN-GO -->
             <div class="max-w-sm rounded-b-xl pb-3">
               <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
-                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="./assets/rndm/bin-go.png"
-                  alt="Sunset in the mountains">
+                <div id="BinGo" class="shadow-2xl rounded-xl bg-[var(--color-senary)]">
+                </div>
                 <div class="px-6 py-4">
                   <div class="font-bold text-xl mb-2">Bin-Go</div>
                   <p class="text-gray-700 text-base">
@@ -249,17 +354,6 @@ export default {
                     disposición de residuos.
                   </p>
                 </div>
-                <!--  -->
-                <!-- <div class="px-6 pt-4 pb-2">
-                  <div class="font-bold text-gray-800 text-sm mb-2">Tecnologias</div>
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#react</span>
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#css</span>
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#javascript</span>
-                </div> -->
-                <!--  -->
                 <div class="px-6 pb-2">
                   <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
                   <span
@@ -274,8 +368,7 @@ export default {
             <!-- VERDIA -->
             <div class="max-w-sm rounded-b-xl pb-3">
               <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
-                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="./assets/rndm/verdia.png"
-                  alt="Sunset in the mountains">
+                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="./assets/rndm/verdia.png">
                 <div class="px-6 py-4">
                   <div class="font-bold text-xl mb-2">Verdia</div>
                   <p class="text-gray-700 text-base">
@@ -283,17 +376,6 @@ export default {
                     el cultivo de caña de azúcar.
                   </p>
                 </div>
-                <!--  -->
-                <!-- <div class="px-6 pt-4 pb-2">
-                  <div class="font-bold text-gray-800 text-sm mb-2">Tecnologias</div>
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#html</span>
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#css</span>
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#javascript</span>
-                </div> -->
-                <!--  -->
                 <div class="px-6 pb-2">
                   <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
                   <span
@@ -304,33 +386,11 @@ export default {
                 </div>
               </div>
             </div>
-            <!-- FLORICIENTA -->
-            <!-- <div class="max-w-sm rounded-b-xlS pb-3">
-              <div
-                class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
-                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="./assets/rndm/floricienta.png"
-                  alt="Sunset in the mountains">
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Floricienta</div>
-                  <p class="text-gray-700 text-base">
-                    "Floricienta" es una página web diseñada con un único propósito: regalar flores amarillas de forma
-                    digital.
-                  </p>
-                </div>
-                <div class="px-6 pt-4 pb-2">
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#html</span>
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#css</span>
-                </div>
-              </div>
-            </div> -->
             <!-- PRODEA - TECTRAMITES -->
             <div class="max-w-sm rounded-b-xl pb-3">
               <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
                 <img class="w-full rounded-t-[10px] rounded-b-[3px]"
-                  src="./assets/rndm/diseño-figma-PRODEA(Proceso de Documentación Escolar y Académica).png"
-                  alt="Sunset in the mountains">
+                  src="./assets/rndm/diseño-figma-PRODEA(Proceso de Documentación Escolar y Académica).png">
                 <div class="px-6 py-4">
                   <div class="font-bold text-xl mb-2">Prodea - TecTramites</div>
                   <p class="text-gray-700 text-base">
@@ -347,19 +407,30 @@ export default {
                 </div>
               </div>
             </div>
+            <!-- MUSIC-SWIPE -->
+            <div class="max-w-sm rounded-b-xl pb-3">
+              <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
+                <div id="MusicSwipe" class="shadow-2xl rounded-xl bg-[var(--color-senary)]">
+                </div>
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2">Music Swipe</div>
+                  <p class="text-gray-700 text-base">
+                    Es una aplicación web que permite a los usuarios descubrir nueva música deslizando
+                    pistas de diferentes géneros musicales. Los usuarios pueden escuchar vistas previas de las pistas,
+                    deslizar hacia la izquierda para rechazar una pista o deslizar hacia la derecha para agregarla a su
+                    lista de reproducción.
+                  </p>
+                </div>
+                <div class="px-6 pb-2">
+                  <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
+                  <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Frontend</span>
+                </div>
+              </div>
+            </div>
           </div>
           <!--  -->
         </div>
-        <!--  -->
-        <!-- <br>
-        <br> -->
-        <!-- B O T O N -->
-        <!-- <a class="flex items-center justify-center w-auto h-auto text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl bg-[var(--color-octonary)] text-[var(--color-nonary)]"
-          href="https://github.com/Bimori404" target="_blank">
-          <i>*- M A S - P R O Y E C T O S -*</i>
-        </a>
-        <br> -->
-        <!--  -->
       </div>
     </TheWindow>
   </main>
