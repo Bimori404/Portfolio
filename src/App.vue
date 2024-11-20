@@ -1,6 +1,23 @@
 <script>
-import { onMounted, ref } from "vue";
+import { onMounted, ref, nextTick } from "vue";
 import TheWindow from "./components/TheWindow.vue";
+
+import MusicSwipe1 from "@/assets/img/MusicSwipeLog.png";
+import MusicSwipe2 from "@/assets/img/MusicSwipeGuest.png";
+import MusicSwipe3 from "@/assets/img/MusicSwipeSpotifyUser.png";
+
+import BinGo1 from "@/assets/img/bin-go.png";
+import BinGo2 from "@/assets/img/bin-goModalBin.png";
+
+import ControlAcadémico1 from "@/assets/img/ControlAcadémicoLogin1.jpg";
+import ControlAcadémico2 from "@/assets/img/ControlAcadémico-HomeStudent.jpg";
+import ControlAcadémico3 from "@/assets/img/ControlAcadémico-ProfileStudent.jpg";
+import ControlAcadémico4 from "@/assets/img/ControlAcadémico-EditProfile.jpg";
+
+import ControlAcadémico5 from "@/assets/img/ControlAcadémicoLogin2.jpg";
+import ControlAcadémico6 from "@/assets/img/ControlAcadémico-HomeAdmin.jpg";
+import ControlAcadémico7 from "@/assets/img/ControlAcadémico-DashboardAdmin.jpg";
+import ControlAcadémico8 from "@/assets/img/ControlAcadémico-DashboardAdmin-StudentInforation.jpg";
 
 class Carousel {
   constructor(container, images) {
@@ -60,38 +77,43 @@ export default {
       {
         id: "MusicSwipe",
         images: [
-          "./assets/img/MusicSwipeLog.png",
-          "./assets/img/MusicSwipeGuest.png",
-          "./assets/img/MusicSwipeSpotifyUser.png",
+          MusicSwipe1,
+          MusicSwipe2,
+          MusicSwipe3,
         ],
       },
       {
         id: "BinGo",
         images: [
-          "./assets/img/bin-go.png",
-          "./assets/img/bin-goModalBin.png",
+          BinGo1,
+          BinGo2,
         ],
       },
       {
         id: "ControlAcadémico",
         images: [
-          "./assets/img/ControlAcadémicoLogin1.jpg",
-          "./assets/img/ControlAcadémico-HomeStudent.jpg",
-          "./assets/img/ControlAcadémico-ProfileStudent.jpg",
-          "./assets/img/ControlAcadémico-EditProfile.jpg",
-          
-          "./assets/img/ControlAcadémicoLogin2.jpg",
-          "./assets/img/ControlAcadémico-HomeAdmin.jpg",
-          "./assets/img/ControlAcadémico-DashboardAdmin.jpg",
-          "./assets/img/ControlAcadémico-DashboardAdmin-StudentInforation.jpg",
+        ControlAcadémico1,
+        ControlAcadémico2,
+        ControlAcadémico3,
+        ControlAcadémico4,
+        ControlAcadémico5,
+        ControlAcadémico6,
+        ControlAcadémico7,
+        ControlAcadémico8,
         ],
       },
     ]);
 
     onMounted(() => {
-      carouselData.value.forEach(({ id, images }) => {
-        const container = document.querySelector(`#${id}`);
-        new Carousel(container, images);
+      nextTick(() => {
+        carouselData.value.forEach(({ id, images }) => {
+          const container = document.querySelector(`#${id}`);
+          if (container) {
+            new Carousel(container, images);
+          } else {
+            console.warn(`No se encontró el contenedor con ID: ${id}`);
+          }
+        });
       });
     });
 
@@ -307,9 +329,6 @@ export default {
                     - Administradores: Pueden visualizar gráficos clave, gestionar boletas, buscar por
                     filtros, y validar datos (automática o manualmente).
                     <br>
-                    <!-- - Tutores Academicos: Pueden ver información académica, personal y la consulta de calificaciones
-                    parciales y finales de los alumnos bajo su tutoría.
-                    <br> -->
                     - Estudiantes: Pueden consultar su información académica, calificaciones y subir documentos
                     importantes.
                   </p>
