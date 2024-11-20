@@ -65,30 +65,30 @@ export default {
       {
         id: "MusicSwipe",
         images: [
-          "../public/img/MusicSwipeLog.png",
-          "../public/img/MusicSwipeGuest.png",
-          "../public/img/MusicSwipeSpotifyUser.png",
+          "./src/assets/img/MusicSwipeLog.png",
+          "./src/assets/img/MusicSwipeGuest.png",
+          "./src/assets/img/MusicSwipeSpotifyUser.png",
         ],
       },
       {
         id: "BinGo",
         images: [
-          "../public/img/bin-go.png",
-          "../public/img/bin-goModalBin.png",
+          "./src/assets/img/bin-go.png",
+          "./src/assets/img/bin-goModalBin.png",
         ],
       },
       {
         id: "ControlAcadémico",
         images: [
-          "../public/img/ControlAcadémicoLogin1.jpg",
-          "../public/img/ControlAcadémico-HomeStudent.jpg",
-          "../public/img/ControlAcadémico-ProfileStudent.jpg",
-          "../public/img/ControlAcadémico-EditProfile.jpg",
+          "./src/assets/img/ControlAcadémicoLogin1.jpg",
+          "./src/assets/img/ControlAcadémico-HomeStudent.jpg",
+          "./src/assets/img/ControlAcadémico-ProfileStudent.jpg",
+          "./src/assets/img/ControlAcadémico-EditProfile.jpg",
 
-          "../public/img/ControlAcadémicoLogin2.jpg",
-          "../public/img/ControlAcadémico-HomeAdmin.jpg",
-          "../public/img/ControlAcadémico-DashboardAdmin.jpg",
-          "../public/img/ControlAcadémico-DashboardAdmin-StudentInforation.jpg",
+          "./src/assets/img/ControlAcadémicoLogin2.jpg",
+          "./src/assets/img/ControlAcadémico-HomeAdmin.jpg",
+          "./src/assets/img/ControlAcadémico-DashboardAdmin.jpg",
+          "./src/assets/img/ControlAcadémico-DashboardAdmin-StudentInforation.jpg",
         ],
       },
     ]);
@@ -155,7 +155,7 @@ export default {
       <div class="flex flex-col">
         <TheWindow class="sm:w-56 hidden md:block md:" color="quinary" title="¿Yo?">
           <div class="picture">
-            <img src="../public/img/sago.png" alt="Imagen de perfil">
+            <img src="./src/assets/img/sago.png" alt="Imagen de perfil">
           </div>
         </TheWindow>
         <br class="hidden md:block">
@@ -334,7 +334,7 @@ export default {
             <!-- FUNDAPROG -->
             <div class="max-w-sm rounded-b-xl pb-3">
               <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
-                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src=".../public/img/fundaprog.png">
+                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="../src/assets/img/fundaprog.png">
                 <div class="px-6 py-4">
                   <div class="font-bold text-xl mb-2">Fundaprog</div>
                   <p class="text-gray-700 text-base">
@@ -378,7 +378,7 @@ export default {
             <!-- VERDIA -->
             <div class="max-w-sm rounded-b-xl pb-3">
               <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
-                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="../public/img/verdia.png">
+                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="./src/assets/img/verdia.png">
                 <div class="px-6 py-4">
                   <div class="font-bold text-xl mb-2">Verdia</div>
                   <p class="text-gray-700 text-base">
@@ -400,7 +400,7 @@ export default {
             <div class="max-w-sm rounded-b-xl pb-3">
               <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
                 <img class="w-full rounded-t-[10px] rounded-b-[3px]"
-                  src="../public/img/diseño-figma-PRODEA(Proceso de Documentación Escolar y Académica).png">
+                  src="./src/assets/img/diseño-figma-PRODEA(Proceso de Documentación Escolar y Académica).png">
                 <div class="px-6 py-4">
                   <div class="font-bold text-xl mb-2">Prodea - TecTramites</div>
                   <p class="text-gray-700 text-base">
