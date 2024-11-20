@@ -14,21 +14,16 @@ class Carousel {
 
   render() {
     this.container.innerHTML = `
-    <div class="carousel-wrapper relative overflow-hidden">
-      <div class="carousel-images flex transition-transform duration-500"
-           style="transform: translateX(-${this.currentIndex * 100}%);">
-        ${this.images
-        .map(
-          (src) => `<img src="${src}" class="w-full rounded-t-[10px] rounded-b-[3px]" alt="Slide">`
-        )
-        .join("")}
+      <div class="carousel-wrapper relative overflow-hidden">
+        <div class="carousel-images flex transition-transform duration-500"
+             style="transform: translateX(-${this.currentIndex * 100}%);">
+          ${this.images.map((src) => `<img src="${src}" class="w-full rounded-t-[10px] rounded-b-[3px]" alt="Slide">`).join('')}
+        </div>
+        <button class="carousel-prev absolute top-1/2 left-3 transform -translate-y-1/2 text-white bg-gray-800 bg-opacity-50 p-2 rounded-full">❮</button>
+        <button class="carousel-next absolute top-1/2 right-3 transform -translate-y-1/2 text-white bg-gray-800 bg-opacity-50 p-2 rounded-full">❯</button>
       </div>
-      <button class="carousel-prev absolute top-1/2 left-3 transform -translate-y-1/2 text-white bg-gray-800 bg-opacity-50 p-2 rounded-full">❮</button>
-      <button class="carousel-next absolute top-1/2 right-3 transform -translate-y-1/2 text-white bg-gray-800 bg-opacity-50 p-2 rounded-full">❯</button>
-    </div>
-  `;
+    `;
   }
-
 
   addEventListeners() {
     this.container.querySelector(".carousel-prev").addEventListener("click", () => this.prev());
@@ -65,30 +60,30 @@ export default {
       {
         id: "MusicSwipe",
         images: [
-          "./src/assets/img/MusicSwipeLog.png",
-          "./src/assets/img/MusicSwipeGuest.png",
-          "./src/assets/img/MusicSwipeSpotifyUser.png",
+          "./assets/img/MusicSwipeLog.png",
+          "./assets/img/MusicSwipeGuest.png",
+          "./assets/img/MusicSwipeSpotifyUser.png",
         ],
       },
       {
         id: "BinGo",
         images: [
-          "./src/assets/img/bin-go.png",
-          "./src/assets/img/bin-goModalBin.png",
+          "./assets/img/bin-go.png",
+          "./assets/img/bin-goModalBin.png",
         ],
       },
       {
         id: "ControlAcadémico",
         images: [
-          "./src/assets/img/ControlAcadémicoLogin1.jpg",
-          "./src/assets/img/ControlAcadémico-HomeStudent.jpg",
-          "./src/assets/img/ControlAcadémico-ProfileStudent.jpg",
-          "./src/assets/img/ControlAcadémico-EditProfile.jpg",
-
-          "./src/assets/img/ControlAcadémicoLogin2.jpg",
-          "./src/assets/img/ControlAcadémico-HomeAdmin.jpg",
-          "./src/assets/img/ControlAcadémico-DashboardAdmin.jpg",
-          "./src/assets/img/ControlAcadémico-DashboardAdmin-StudentInforation.jpg",
+          "./assets/img/ControlAcadémicoLogin1.jpg",
+          "./assets/img/ControlAcadémico-HomeStudent.jpg",
+          "./assets/img/ControlAcadémico-ProfileStudent.jpg",
+          "./assets/img/ControlAcadémico-EditProfile.jpg",
+          
+          "./assets/img/ControlAcadémicoLogin2.jpg",
+          "./assets/img/ControlAcadémico-HomeAdmin.jpg",
+          "./assets/img/ControlAcadémico-DashboardAdmin.jpg",
+          "./assets/img/ControlAcadémico-DashboardAdmin-StudentInforation.jpg",
         ],
       },
     ]);
@@ -96,14 +91,9 @@ export default {
     onMounted(() => {
       carouselData.value.forEach(({ id, images }) => {
         const container = document.querySelector(`#${id}`);
-        if (container) {
-          new Carousel(container, images);
-        } else {
-          console.warn(`No se encontró el contenedor con ID: ${id}`);
-        }
+        new Carousel(container, images);
       });
     });
-
 
     return { carouselData };
   },
@@ -155,7 +145,7 @@ export default {
       <div class="flex flex-col">
         <TheWindow class="sm:w-56 hidden md:block md:" color="quinary" title="¿Yo?">
           <div class="picture">
-            <img src="./src/assets/img/sago.png" alt="Imagen de perfil">
+            <img src="./assets/img/sago.png" alt="Imagen de perfil">
           </div>
         </TheWindow>
         <br class="hidden md:block">
@@ -334,7 +324,7 @@ export default {
             <!-- FUNDAPROG -->
             <div class="max-w-sm rounded-b-xl pb-3">
               <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
-                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="../src/assets/img/fundaprog.png">
+                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="./assets/img/fundaprog.png">
                 <div class="px-6 py-4">
                   <div class="font-bold text-xl mb-2">Fundaprog</div>
                   <p class="text-gray-700 text-base">
@@ -378,7 +368,7 @@ export default {
             <!-- VERDIA -->
             <div class="max-w-sm rounded-b-xl pb-3">
               <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
-                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="./src/assets/img/verdia.png">
+                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="./assets/img/verdia.png">
                 <div class="px-6 py-4">
                   <div class="font-bold text-xl mb-2">Verdia</div>
                   <p class="text-gray-700 text-base">
@@ -400,7 +390,7 @@ export default {
             <div class="max-w-sm rounded-b-xl pb-3">
               <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
                 <img class="w-full rounded-t-[10px] rounded-b-[3px]"
-                  src="./src/assets/img/diseño-figma-PRODEA(Proceso de Documentación Escolar y Académica).png">
+                  src="./assets/img/diseño-figma-PRODEA(Proceso de Documentación Escolar y Académica).png">
                 <div class="px-6 py-4">
                   <div class="font-bold text-xl mb-2">Prodea - TecTramites</div>
                   <p class="text-gray-700 text-base">
