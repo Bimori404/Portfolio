@@ -145,7 +145,7 @@ export default {
       <div class="flex flex-col">
         <TheWindow class="sm:w-56 hidden md:block md:" color="quinary" title="¿Yo?">
           <div class="picture">
-            <img src="./assets/rndm/sago.png" alt="Imagen de perfil">
+            <img src="../public/img/sago.png" alt="Imagen de perfil">
           </div>
         </TheWindow>
         <br class="hidden md:block">
@@ -324,7 +324,7 @@ export default {
             <!-- FUNDAPROG -->
             <div class="max-w-sm rounded-b-xl pb-3">
               <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
-                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="./assets/rndm/fundaprog.png">
+                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src=".../public/img/fundaprog.png">
                 <div class="px-6 py-4">
                   <div class="font-bold text-xl mb-2">Fundaprog</div>
                   <p class="text-gray-700 text-base">
@@ -368,7 +368,7 @@ export default {
             <!-- VERDIA -->
             <div class="max-w-sm rounded-b-xl pb-3">
               <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
-                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="./assets/rndm/verdia.png">
+                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="../public/img/verdia.png">
                 <div class="px-6 py-4">
                   <div class="font-bold text-xl mb-2">Verdia</div>
                   <p class="text-gray-700 text-base">
@@ -390,7 +390,7 @@ export default {
             <div class="max-w-sm rounded-b-xl pb-3">
               <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
                 <img class="w-full rounded-t-[10px] rounded-b-[3px]"
-                  src="./assets/rndm/diseño-figma-PRODEA(Proceso de Documentación Escolar y Académica).png">
+                  src="../public/img/diseño-figma-PRODEA(Proceso de Documentación Escolar y Académica).png">
                 <div class="px-6 py-4">
                   <div class="font-bold text-xl mb-2">Prodea - TecTramites</div>
                   <p class="text-gray-700 text-base">
