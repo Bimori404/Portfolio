@@ -14,16 +14,21 @@ class Carousel {
 
   render() {
     this.container.innerHTML = `
-      <div class="carousel-wrapper relative overflow-hidden">
-        <div class="carousel-images flex transition-transform duration-500"
-             style="transform: translateX(-${this.currentIndex * 100}%);">
-          ${this.images.map((src) => `<img src="${src}" class="w-full rounded-t-[10px] rounded-b-[3px]" alt="Slide">`).join('')}
-        </div>
-        <button class="carousel-prev absolute top-1/2 left-3 transform -translate-y-1/2 text-white bg-gray-800 bg-opacity-50 p-2 rounded-full">❮</button>
-        <button class="carousel-next absolute top-1/2 right-3 transform -translate-y-1/2 text-white bg-gray-800 bg-opacity-50 p-2 rounded-full">❯</button>
+    <div class="carousel-wrapper relative overflow-hidden">
+      <div class="carousel-images flex transition-transform duration-500"
+           style="transform: translateX(-${this.currentIndex * 100}%);">
+        ${this.images
+        .map(
+          (src) => `<img src="${src}" class="w-full rounded-t-[10px] rounded-b-[3px]" alt="Slide">`
+        )
+        .join("")}
       </div>
-    `;
+      <button class="carousel-prev absolute top-1/2 left-3 transform -translate-y-1/2 text-white bg-gray-800 bg-opacity-50 p-2 rounded-full">❮</button>
+      <button class="carousel-next absolute top-1/2 right-3 transform -translate-y-1/2 text-white bg-gray-800 bg-opacity-50 p-2 rounded-full">❯</button>
+    </div>
+  `;
   }
+
 
   addEventListeners() {
     this.container.querySelector(".carousel-prev").addEventListener("click", () => this.prev());
@@ -60,29 +65,30 @@ export default {
       {
         id: "MusicSwipe",
         images: [
-          "/img/MusicSwipeLog.png",
-          "/img/MusicSwipeGuest.png",
-          "/img/MusicSwipeSpotifyUser.png",
+          "../public/img/MusicSwipeLog.png",
+          "../public/img/MusicSwipeGuest.png",
+          "../public/img/MusicSwipeSpotifyUser.png",
         ],
       },
       {
         id: "BinGo",
         images: [
-          "/img/bin-go.png",
-          "/img/bin-goModalBin.png",
+          "../public/img/bin-go.png",
+          "../public/img/bin-goModalBin.png",
         ],
       },
       {
         id: "ControlAcadémico",
         images: [
-          "/img/ControlAcadémicoLogin1.jpg",
-          "/img/ControlAcadémico-HomeStudent.jpg",
-          "/img/ControlAcadémico-ProfileStudent.jpg",
-          "/img/ControlAcadémico-EditProfile.jpg",
-          "/img/ControlAcadémicoLogin2.jpg",
-          "/img/ControlAcadémico-HomeAdmin.jpg",
-          "/img/ControlAcadémico-DashboardAdmin.jpg",
-          "/img/ControlAcadémico-DashboardAdmin-StudentInforation.jpg",
+          "../public/img/ControlAcadémicoLogin1.jpg",
+          "../public/img/ControlAcadémico-HomeStudent.jpg",
+          "../public/img/ControlAcadémico-ProfileStudent.jpg",
+          "../public/img/ControlAcadémico-EditProfile.jpg",
+
+          "../public/img/ControlAcadémicoLogin2.jpg",
+          "../public/img/ControlAcadémico-HomeAdmin.jpg",
+          "../public/img/ControlAcadémico-DashboardAdmin.jpg",
+          "../public/img/ControlAcadémico-DashboardAdmin-StudentInforation.jpg",
         ],
       },
     ]);
@@ -90,9 +96,14 @@ export default {
     onMounted(() => {
       carouselData.value.forEach(({ id, images }) => {
         const container = document.querySelector(`#${id}`);
-        new Carousel(container, images);
+        if (container) {
+          new Carousel(container, images);
+        } else {
+          console.warn(`No se encontró el contenedor con ID: ${id}`);
+        }
       });
     });
+
 
     return { carouselData };
   },
