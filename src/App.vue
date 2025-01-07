@@ -184,7 +184,7 @@ export default {
               <!-- C V -->
               <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-octonary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100"
                 alt="Curriculum Vitae"
-                href="https://docs.google.com/document/d/17UlDdhmw1klLEWAe8bYdmC-PJTuKeHr_/edit?usp=sharing&ouid=115285703923727061955&rtpof=true&sd=true"
+                href="https://drive.google.com/file/d/1BQTZHRKPZPwQ4Uaxhj04FB5k2hmdh-hI/view?usp=sharing"
                 target="_blank">
 
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 448 512">
