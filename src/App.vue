@@ -1,6 +1,191 @@
+<template>
+  <main class="sm:pt-5 relative max-w-screen-md mx-auto p-5">
+    <!-- P R E S E N T A C I O N -->
+    <TheWindow class="mb-3" :title="portfolioData.presentation.title" color="senary">
+      <div class="font-black text-5xl content-center mx-4">
+        Hola, me presento soy <span class="text-[var(--color-secondary)]"> <br> {{ portfolioData.presentation.name
+        }}</span>
+      </div><br>
+      <div class="font-bold text-lg mb-2 mx-4" v-for="(paragraph, index) in portfolioData.presentation.description"
+        :key="index">
+        {{ paragraph }}
+      </div>
+    </TheWindow>
+
+    <!-- S O B R E - M I -->
+    <div class="flex max-sm:flex-col gap-3 mb-3">
+      <TheWindow class="sm:basis-2/3" color="senary" :title="portfolioData.about.title">
+        <div class="font-bold text-md mx-4" v-for="(paragraph, index) in portfolioData.about.content" :key="index">
+          <div>{{ paragraph }}</div>
+          <br v-if="index < portfolioData.about.content.length - 1">
+        </div>
+      </TheWindow>
+
+      <!-- R E D E S - E - I M A G E N -->
+      <div class="flex flex-col">
+        <TheWindow class="sm:w-56 hidden md:block md:" color="quinary" title="¿Yo?">
+          <div class="picture">
+            <img src="./assets/img/sago.png" alt="Imagen de perfil">
+          </div>
+        </TheWindow>
+        <br class="hidden md:block">
+
+        <!-- R E D E S -->
+        <TheWindow class="sm:w-56" color="senary" :title="portfolioData.social.title">
+          <br>
+          <div class="flex max-sm:flex-col justify-center items-center gap-3">
+            <div class="flex flex-wrap justify-center text-2xl gap-2">
+              <a v-for="(link, index) in portfolioData.social.links" :key="index"
+                class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-octonary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100"
+                :href="link.url" target="_blank">
+                <font-awesome-icon v-if="link.icon !== 'cv'" :icon="link.icon" style="color: #ececec;" />
+                <svg v-else xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 448 512">
+                  <path fill="#ececec"
+                    d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <br>
+        </TheWindow>
+      </div>
+    </div>
+
+    <!-- H A B I L I D A D E S -->
+    <div class="flex max-sm:flex-col gap-3 mb-3 text-center">
+      <!-- L E N G U A J E S -->
+      <TheWindow color="senary" class="sm:basis-1/3" :title="portfolioData.skills.programming.title">
+        <div class="font-bold text-sm mb-2">
+          <p>Cuento con experiencia en los siguientes lenguajes:</p>
+          <br>
+          <div class="flex max-sm:flex-col justify-center items-center gap-3">
+            <div class="flex flex-wrap justify-center text-2xl gap-2">
+              <a v-for="(icon, index) in portfolioData.skills.programming.items" :key="index"
+                class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
+                <img :src="icon" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </TheWindow>
+
+      <!-- S O F T W A R E -->
+      <TheWindow color="senary" class="sm:basis-1/3" :title="portfolioData.skills.software.title">
+        <div class="font-bold text-sm mb-2">
+          <p>{{ portfolioData.skills.software.description }}</p>
+          <br>
+          <div class="flex max-sm:flex-col justify-center items-center gap-3">
+            <div class="flex flex-wrap justify-center text-2xl gap-2">
+              <a v-for="(icon, index) in portfolioData.skills.software.items" :key="index"
+                class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
+                <img :src="icon" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </TheWindow>
+
+      <!-- R U T A - A C T U A L -->
+      <TheWindow color="senary" class="sm:basis-1/3" :title="portfolioData.skills.learning.title">
+        <div class="font-bold text-sm mb-2">
+          <p>{{ portfolioData.skills.learning.description }}</p>
+          <br>
+          <div class="flex max-sm:flex-col justify-center items-center gap-3">
+            <div class="flex flex-wrap justify-center text-2xl gap-2">
+              <a v-for="(icon, index) in portfolioData.skills.learning.items" :key="index"
+                class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
+                <img :src="icon" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </TheWindow>
+    </div>
+
+    <!-- - E X P E R I E N C I A - L A B O R A L - -->
+    <TheWindow class="mb-3" :title="portfolioData.experience.title" color="senary">
+      <div class="font-bold text-lg mb-2 mx-4">
+        <!-- Mostrar solo las primeras 4 experiencias -->
+        <div v-for="(job, index) in visibleExperiences" :key="index" class="mb-6">
+          <div class="flex justify-between items-start">
+            <h3 class="text-xl font-bold text-[var(--color-secondary)]">{{ job.position }}</h3>
+            <span class="bg-[var(--color-octonary)] text-white px-2 py-1 rounded text-sm">{{ job.period }}</span>
+          </div>
+          <h4 class="text-lg font-semibold mb-2">{{ job.company }}</h4>
+          <ul class="list-disc pl-5">
+            <li v-for="(desc, descIndex) in job.description" :key="descIndex" class="mb-1">{{ desc }}</li>
+          </ul>
+        </div>
+
+        <!-- Botón para cargar más experiencias (solo visible si hay más de 4) -->
+        <div v-if="showLoadMore" class="text-center mt-4">
+          <button @click="loadMoreExperiences"
+            class="bg-[var(--color-secondary)] text-white px-4 py-2 rounded-lg shadow-solid border-2 border-black hover:translate-y-[3px] hover:translate-x-[3px] hover:shadow-none transition-all duration-100">
+            Cargar más experiencias
+          </button>
+        </div>
+      </div>
+    </TheWindow>
+
+    <!-- P R O Y E C T O S -->
+    <TheWindow class="mb-3" :title="portfolioData.projects.title" color="senary">
+      <div class="font-bold text-lg mb-2">
+        <div class="flex flex-col md:flex-row md:space-x-4">
+          <div class="max-w-sm rounded-b-xl">
+            <div v-for="(project, index) in projects.slice(0, 3)" :key="index" class="max-w-sm rounded-b-xl pb-3">
+              <div class="shadow-2xl rounded-xl bg-[var(--color-senary)]">
+                <div v-if="project.images" :id="project.id" class="shadow-2xl rounded-xl bg-[var(--color-senary)]">
+                </div>
+                <img v-else-if="project.image" class="w-full rounded-t-[10px] rounded-b-[3px]" :src="project.image">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2">{{ project.title }}</div>
+                  <p class="text-gray-700 text-base">{{ project.description }}</p>
+                </div>
+                <div class="px-6 pb-2">
+                  <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
+                  <span v-for="(role, roleIndex) in project.roles" :key="roleIndex"
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                    {{ role }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="max-w-sm rounded-b-xl">
+            <div v-for="(project, index) in projects.slice(3)" :key="index + 3" class="max-w-sm rounded-b-xl pb-3">
+              <div class="shadow-2xl rounded-xl bg-[var(--color-senary)]">
+                <div v-if="project.images" :id="project.id" class="shadow-2xl rounded-xl bg-[var(--color-senary)]">
+                </div>
+                <img v-else-if="project.image" class="w-full rounded-t-[10px] rounded-b-[3px]" :src="project.image">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2">{{ project.title }}</div>
+                  <p class="text-gray-700 text-base">{{ project.description }}</p>
+                </div>
+                <div class="px-6 pb-2">
+                  <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
+                  <span v-for="(role, roleIndex) in project.roles" :key="roleIndex"
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                    {{ role }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </TheWindow>
+  </main>
+</template>
+
 <script>
-import { onMounted, ref, nextTick } from "vue";
+import { onMounted, ref, nextTick, computed } from "vue";
 import TheWindow from "./components/TheWindow.vue";
+import { portfolioData } from "./lib/portfolioData";
+
+import FundaprogImg from "@/assets/img/fundaprog.png";
+import VerdiaImg from "@/assets/img/verdia.png";
+import ProdeaImg from "@/assets/img/diseño-figma-PRODEA(Proceso de Documentación Escolar y Académica).png";
 
 import MusicSwipe1 from "@/assets/img/MusicSwipeLog.png";
 import MusicSwipe2 from "@/assets/img/MusicSwipeGuest.png";
@@ -13,7 +198,6 @@ import ControlAcadémico1 from "@/assets/img/ControlAcadémicoLogin1.jpg";
 import ControlAcadémico2 from "@/assets/img/ControlAcadémico-HomeStudent.jpg";
 import ControlAcadémico3 from "@/assets/img/ControlAcadémico-ProfileStudent.jpg";
 import ControlAcadémico4 from "@/assets/img/ControlAcadémico-EditProfile.jpg";
-
 import ControlAcadémico5 from "@/assets/img/ControlAcadémicoLogin2.jpg";
 import ControlAcadémico6 from "@/assets/img/ControlAcadémico-HomeAdmin.jpg";
 import ControlAcadémico7 from "@/assets/img/ControlAcadémico-DashboardAdmin.jpg";
@@ -73,36 +257,34 @@ export default {
     TheWindow,
   },
   setup() {
-    const carouselData = ref([
-      {
-        id: "MusicSwipe",
-        images: [
-          MusicSwipe1,
-          MusicSwipe2,
-          MusicSwipe3,
-        ],
-      },
-      {
-        id: "BinGo",
-        images: [
-          BinGo1,
-          BinGo2,
-        ],
-      },
-      {
-        id: "ControlAcadémico",
-        images: [
-        ControlAcadémico1,
-        ControlAcadémico2,
-        ControlAcadémico3,
-        ControlAcadémico4,
-        ControlAcadémico5,
-        ControlAcadémico6,
-        ControlAcadémico7,
-        ControlAcadémico8,
-        ],
-      },
-    ]);
+    const projectsWithImages = portfolioData.projects.items.map(project => {
+      if (project.id === "MusicSwipe") {
+        return { ...project, images: [MusicSwipe1, MusicSwipe2, MusicSwipe3] };
+      } else if (project.id === "BinGo") {
+        return { ...project, images: [BinGo1, BinGo2] };
+      } else if (project.id === "ControlAcadémico") {
+        return {
+          ...project,
+          images: [
+            ControlAcadémico1, ControlAcadémico2, ControlAcadémico3, ControlAcadémico4,
+            ControlAcadémico5, ControlAcadémico6, ControlAcadémico7, ControlAcadémico8
+          ]
+        };
+      } else if (project.id === "Fundaprog") {
+        return { ...project, image: FundaprogImg };
+      } else if (project.id === "Verdia") {
+        return { ...project, image: VerdiaImg };
+      } else if (project.id === "Prodea") {
+        return { ...project, image: ProdeaImg };
+      }
+      return project;
+    });
+
+    const carouselData = ref(
+      projectsWithImages
+        .filter(project => project.images)
+        .map(({ id, images }) => ({ id, images }))
+    );
 
     onMounted(() => {
       nextTick(() => {
@@ -117,349 +299,32 @@ export default {
       });
     });
 
-    return { carouselData };
+    // Variables para controlar la visualización de experiencias
+    const experiencesToShow = ref(2);
+    const allExperiences = portfolioData.experience.items;
+
+    // Computed properties
+    const visibleExperiences = computed(() => {
+      return allExperiences.slice(0, experiencesToShow.value);
+    });
+
+    const showLoadMore = computed(() => {
+      return allExperiences.length > 4 && experiencesToShow.value < allExperiences.length;
+    });
+
+    // Método para cargar más experiencias
+    const loadMoreExperiences = () => {
+      experiencesToShow.value = allExperiences.length;
+    };
+
+    return {
+      portfolioData,
+      projects: projectsWithImages,
+      carouselData,
+      visibleExperiences,
+      showLoadMore,
+      loadMoreExperiences
+    };
   },
 };
 </script>
-
-
-
-<template>
-  <main class="sm:pt-5 relative max-w-screen-md mx-auto p-5">
-    <!-- P R E S E N T A C I O N -->
-    <TheWindow class="mb-3" title="- P R E S E N T A C I Ó N -" color="senary">
-      <div class="font-black text-5xl content-center mx-4">
-        Hola, me presento soy <span class="text-[var(--color-secondary)]"> <br> J. Samuel P. Gonzalez</span>
-      </div><br>
-      <div class="font-bold text-lg mb-2 mx-4">
-        Soy un apasionado del diseño y desarrollo, con habilidades y experiencia en la creación de sitios web que son
-        tanto intuitivos como atractivos para el usuario.
-        <br><br>
-        Mi enfoque se centra en la creación de experiencias de usuario que sean fáciles de usar y visualmente
-        atractivas,
-        con el objetivo de mejorar la interacción y satisfacción del usuario con el sitio web.
-
-        <i>*insert here some lorem
-          ipsum*</i>
-      </div>
-    </TheWindow>
-    <!-- S O B R E - M I -->
-    <div class="flex max-sm:flex-col gap-3 mb-3">
-      <TheWindow class="sm:basis-2/3" color="senary" title="- S O B R E - M Í -">
-        <div class="font-bold text-md mx-4">
-          <div>
-            Actualmente estoy estudiando la carrera de Ingeniería en Sistemas Computacionales.
-          </div><br>
-          <div>
-            Mi enfoque en el diseño y desarrollo web es crear interfaces limpias y atractivas que hagan que los usuarios
-            se sientan cómodos y puedan navegar fácilmente. Lo que permite una experiencia de usuario óptima, trabajando
-            con HTML, CSS y JavaScript, lo que me permite crear soluciones técnicas y funcionales.
-          </div><br>
-          <div>
-            Cuento con un humor algo ácido y una personalidad muy carismática. Me considero una persona capaz y
-            proactiva, con mucho interés en aprender cada día más, me encanta interactuar con la gente y trabajar en
-            equipo.
-          </div>
-
-        </div>
-      </TheWindow>
-      <!-- R E D E S - E - I M A G E N -->
-      <div class="flex flex-col">
-        <TheWindow class="sm:w-56 hidden md:block md:" color="quinary" title="¿Yo?">
-          <div class="picture">
-            <img src="./assets/img/sago.png" alt="Imagen de perfil">
-          </div>
-        </TheWindow>
-        <br class="hidden md:block">
-        <!-- R E D E S -->
-        <TheWindow class="sm:w-56" color="senary" title="- R E D E S -">
-          <br>
-          <div class="flex max-sm:flex-col justify-center items-center gap-3">
-            <div class="flex flex-wrap justify-center text-2xl gap-2">
-              <!-- G I T H U B -->
-              <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-octonary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100"
-                href="https://github.com/Bimori404" target="_blank">
-                <font-awesome-icon icon="fa-brands fa-github" style="color: #ececec;" />
-              </a>
-              <!-- C V -->
-              <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-octonary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100"
-                alt="Curriculum Vitae"
-                href="https://drive.google.com/file/d/1BQTZHRKPZPwQ4Uaxhj04FB5k2hmdh-hI/view?usp=sharing"
-                target="_blank">
-
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 448 512">
-                  <path fill="#ececec"
-                    d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
-                </svg>
-              </a>
-              <!-- L I N K E D I N -->
-              <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-octonary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100"
-                href="https://www.linkedin.com/in/jsamuelpgonzalez/" target="_blank">
-                <font-awesome-icon icon="fa-brands fa-linkedin" style="color: #ececec;" />
-              </a>
-            </div>
-          </div>
-          <br>
-        </TheWindow>
-      </div>
-    </div>
-    <!-- H A B I L I D A D E S -->
-    <div class="flex max-sm:flex-col gap-3 mb-3 text-center">
-      <!-- L E N G U A J E S -->
-      <TheWindow color="senary" class="sm:basis-1/3"
-        title="- L E N G U A J E S - D E - P R O G R A M A C I O N - (DSL y GPL) -">
-        <div class="font-bold text-sm mb-2">
-          <p>
-            Cuento con experiencia en los siguientes lenguajes:
-          </p>
-          <br>
-          <div class="flex max-sm:flex-col justify-center items-center gap-3">
-            <div class="flex flex-wrap justify-center text-2xl gap-2">
-              <a
-                class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
-                <img src="https://skillicons.dev/icons?i=java" />
-              </a>
-              <a
-                class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
-                <img src="https://skillicons.dev/icons?i=html" />
-              </a>
-              <a
-                class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
-                <img src="https://skillicons.dev/icons?i=css" />
-              </a>
-            </div>
-          </div>
-          <br>
-          <div class="flex max-sm:flex-col justify-center items-center gap-3">
-            <div class="flex flex-wrap justify-center text-2xl gap-2">
-              <a
-                class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
-                <img src="https://skillicons.dev/icons?i=bootstrap" />
-              </a>
-              <a
-                class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
-                <img src="https://skillicons.dev/icons?i=tailwind" />
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </TheWindow>
-      <!-- S O F T W A R E -->
-      <TheWindow color="senary" class="sm:basis-1/3" title="- S O F T W A R E -">
-        <div class="font-bold text-sm mb-2">
-          <p>
-            He trabajado y tengo experiencia en el uso de estas herramientas para crear y diseñar diversos tipos de
-            proyectos visuales.
-          </p>
-          <br>
-          <div class="flex max-sm:flex-col justify-center items-center gap-3">
-            <div class="flex flex-wrap justify-center text-2xl gap-2">
-              <a
-                class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
-                <img src="https://skillicons.dev/icons?i=vscode" />
-              </a>
-              <a
-                class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
-                <img src="https://skillicons.dev/icons?i=figma" />
-              </a>
-              <a
-                class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
-                <img src="https://skillicons.dev/icons?i=xd" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </TheWindow>
-      <!-- R U T A - A C T U A L -->
-      <TheWindow color="senary" class="sm:basis-1/3" title="- A C T U A L - R U TA - D E - A P R E N  D I Z A J E -">
-        <div class="font-bold text-sm mb-2">
-          <p>
-            He trabajado poco con estas herramientas y me gustaria aprender a manejarlas mejor.
-          </p>
-          <br>
-          <div class="flex max-sm:flex-col justify-center items-center gap-3">
-            <div class="flex flex-wrap justify-center text-2xl gap-2">
-              <a
-                class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
-                <img src="https://skillicons.dev/icons?i=ai" />
-              </a>
-              <a
-                class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
-                <img src="https://skillicons.dev/icons?i=ps" />
-              </a>
-              <a
-                class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
-                <img src="https://skillicons.dev/icons?i=js" />
-              </a>
-            </div>
-
-          </div>
-          <br>
-          <div class="flex max-sm:flex-col justify-center items-center gap-3">
-            <div class="flex flex-wrap justify-center text-2xl gap-2">
-              <a
-                class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
-                <img src="https://skillicons.dev/icons?i=vue" />
-              </a>
-              <a
-                class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
-                <img src="https://skillicons.dev/icons?i=php" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </TheWindow>
-    </div>
-    <!-- P R O Y E C T O S -->
-    <TheWindow class="mb-3" title="- P R O Y E C T O S -" color="senary">
-      <div class="font-bold text-lg mb-2">
-        <!--  -->
-        <div class="flex flex-col md:flex-row md:space-x-4">
-          <!--  -->
-          <div class="max-w-sm rounded-b-xl">
-            <!-- CONTROL-ACADEMICO -->
-            <div class="max-w-sm rounded-b-xl pb-3">
-              <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
-                <div id="ControlAcadémico" class="shadow-2xl rounded-xl bg-[var(--color-senary)]">
-                </div>
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Sistema de Control Académico</div>
-                  <p class="text-gray-700 text-base">
-                    - Administradores: Pueden visualizar gráficos clave, gestionar boletas, buscar por
-                    filtros, y validar datos (automática o manualmente).
-                    <br>
-                    - Estudiantes: Pueden consultar su información académica, calificaciones y subir documentos
-                    importantes.
-                  </p>
-                </div>
-                <div class="px-6 pb-2">
-                  <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#FullStack</span>
-                </div>
-              </div>
-            </div>
-            <!-- FUNDAPROG -->
-            <div class="max-w-sm rounded-b-xl pb-3">
-              <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
-                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="./assets/img/fundaprog.png">
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Fundaprog</div>
-                  <p class="text-gray-700 text-base">
-                    "Fundaprog" tiene como objetivo la creación de un sitio web educativo dedicado a difundir material
-                    de Fundamentos de Programación.
-                  </p>
-                </div>
-                <div class="px-6 pb-2">
-                  <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#UX/UI
-                    Designer</span>
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Frontend</span>
-                </div>
-              </div>
-            </div>
-            <!-- BIN-GO -->
-            <div class="max-w-sm rounded-b-xl pb-3">
-              <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
-                <div id="BinGo" class="shadow-2xl rounded-xl bg-[var(--color-senary)]">
-                </div>
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Bin-Go</div>
-                  <p class="text-gray-700 text-base">
-                    Sistema web de gestión integral de residuos basado en IoT para controlar, manejar y optimizar la
-                    disposición de residuos.
-                  </p>
-                </div>
-                <div class="px-6 pb-2">
-                  <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Frontend</span>
-                </div>
-              </div>
-            </div>
-            <!--  -->
-          </div>
-          <!--  -->
-          <div class="max-w-sm rounded-b-xl">
-            <!-- VERDIA -->
-            <div class="max-w-sm rounded-b-xl pb-3">
-              <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
-                <img class="w-full rounded-t-[10px] rounded-b-[3px]" src="./assets/img/verdia.png">
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Verdia</div>
-                  <p class="text-gray-700 text-base">
-                    Plataforma web basada en inteligencia artificial (IA) para la detección temprana de enfermedades en
-                    el cultivo de caña de azúcar.
-                  </p>
-                </div>
-                <div class="px-6 pb-2">
-                  <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Frontend</span>
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Graphic
-                    Designer</span>
-                </div>
-              </div>
-            </div>
-            <!-- PRODEA - TECTRAMITES -->
-            <div class="max-w-sm rounded-b-xl pb-3">
-              <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
-                <img class="w-full rounded-t-[10px] rounded-b-[3px]"
-                  src="./assets/img/diseño-figma-PRODEA(Proceso de Documentación Escolar y Académica).png">
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Prodea - TecTramites</div>
-                  <p class="text-gray-700 text-base">
-                    Plataforma digital para simplificar el proceso de obtener documentos académicos, ofreciendo una
-                    solución
-                    eficiente y conveniente para estudiantes y instituciones educativas.
-                  </p>
-                </div>
-                <div class="px-6 pb-2">
-                  <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#UX/UI
-                    Designer</span>
-                </div>
-              </div>
-            </div>
-            <!-- MUSIC-SWIPE -->
-            <div class="max-w-sm rounded-b-xl pb-3">
-              <div class="shadow-2xl rounded-xl  bg-[var(--color-senary)]">
-                <div id="MusicSwipe" class="shadow-2xl rounded-xl bg-[var(--color-senary)]">
-                </div>
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Music Swipe</div>
-                  <p class="text-gray-700 text-base">
-                    Es una aplicación web que permite a los usuarios descubrir nueva música deslizando
-                    pistas de diferentes géneros musicales. Los usuarios pueden escuchar vistas previas de las pistas,
-                    deslizar hacia la izquierda para rechazar una pista o deslizar hacia la derecha para agregarla a su
-                    lista de reproducción.
-                  </p>
-                </div>
-                <div class="px-6 pb-2">
-                  <div class="font-bold text-gray-800 text-sm mb-2">Rol</div>
-                  <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Frontend</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--  -->
-        </div>
-      </div>
-    </TheWindow>
-  </main>
-  <!-- <div class="bg-[var(--color-primary)]">1</div>
-    <div class="bg-[var(--color-secondary)]">2</div>
-    <div class="bg-[var(--color-tertiary)]">3</div>
-    <div class="bg-[var(--color-quaternary)]">4</div>
-    <div class="bg-[var(--color-quinary)]">5</div>
-    <div class="bg-[var(--color-senary)]">6</div>
-    <div class="bg-[var(--color-septenary)]">7</div>
-    <div class="bg-[var(--color-octonary)]">8</div> -->
-
-</template>
