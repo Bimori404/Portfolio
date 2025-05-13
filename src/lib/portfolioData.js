@@ -71,14 +71,14 @@ export const portfolioData = {
     experience: {
         title: "- E X P E R I E N C I A - L A B O R A L -",
         items: [
-            // {
-            //     position: "Desarrollador Web Freelance",
-            //     company: "RefilUp",
-            //     period: "May 09-11, 2025",
-            //     description: [
-            //         "Rediseñé el aspecto y la estructura de un sitio web corporativo, cuidando que fuera claro, atractivo y fácil de usar en cualquier dispositivo, con opciones centradas en el usuario y multilenguaje."
-            //     ]
-            // },
+            {
+                position: "Desarrollador Web Freelance",
+                company: "RefilUp",
+                period: "May 09-11, 2025",
+                description: [
+                    "Rediseñé el aspecto y la estructura de un sitio web corporativo, cuidando que fuera claro, atractivo y fácil de usar en cualquier dispositivo, con opciones centradas en el usuario y multilenguaje."
+                ]
+            },
             {
                 position: "Desarrollador Web - Residencia Profesional",
                 company: "CINVESTAV - Tecnologías para la Gestión de Redes y Datos",
