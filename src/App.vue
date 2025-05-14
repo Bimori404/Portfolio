@@ -23,7 +23,7 @@
 
       <!-- R E D E S - E - I M A G E N -->
       <div class="flex flex-col">
-        <TheWindow class="sm:w-56 bg-[#0C0C0C] hidden md:block" title="¿Yo?">
+        <TheWindow class="sm:w-56 bg-[#0C0C0C] hidden md:block" color="quinary" title="¿Yo?">
           <div class="picture">
             <img src="./assets/img/sago.png" alt="Imagen de perfil">
           </div>
