@@ -103,9 +103,9 @@
     </div>
 
     <!-- - E X P E R I E N C I A - L A B O R A L - -->
-    <TheWindow class="mb-3" :title="portfolioData.experience.title" color="senary">
+    <!-- <TheWindow class="mb-3" :title="portfolioData.experience.title" color="senary">
       <div class="font-bold text-lg mb-2 mx-4">
-        <!-- Mostrar solo las primeras 4 experiencias -->
+        
         <div v-for="(job, index) in visibleExperiences" :key="index" class="mb-6">
           <div class="flex justify-between items-start">
             <h3 class="text-xl font-bold text-[var(--color-secondary)]">{{ job.position }}</h3>
@@ -117,7 +117,6 @@
           </ul>
         </div>
 
-        <!-- Botón para cargar más experiencias (solo visible si hay más de 4) -->
         <div v-if="showLoadMore" class="text-center mt-4">
           <button @click="loadMoreExperiences"
             class="bg-[var(--color-secondary)] text-white px-4 py-2 rounded-lg shadow-solid border-2 border-black hover:translate-y-[3px] hover:translate-x-[3px] hover:shadow-none transition-all duration-100">
@@ -125,7 +124,7 @@
           </button>
         </div>
       </div>
-    </TheWindow>
+    </TheWindow> -->
 
     <!-- P R O Y E C T O S -->
     <TheWindow class="mb-3" :title="portfolioData.projects.title" color="senary">
