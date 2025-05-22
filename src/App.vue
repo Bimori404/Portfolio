@@ -35,19 +35,27 @@
           <br>
           <div class="flex max-sm:flex-col justify-center items-center gap-3">
             <div class="flex flex-wrap justify-center text-2xl gap-2">
-              <a v-for="(link, index) in portfolioData.social.links" :key="index"
-                class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-octonary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100"
-                :href="link.url" target="_blank">
-                <font-awesome-icon v-if="link.icon !== 'cv'" :icon="link.icon" style="color: #ececec;" />
-                <svg v-else xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 448 512">
-                  <path fill="#ececec"
-                    d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
-                </svg>
-              </a>
+              <template v-for="(link, index) in portfolioData.social.links" :key="index">
+                <a v-if="link.icon !== 'cv'"
+                  class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-octonary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100"
+                  :href="link.url" target="_blank">
+                  <font-awesome-icon :icon="link.icon" style="color: #ececec;" />
+                </a>
+                <button v-else
+                  class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-octonary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100"
+                  @click="showCVModal = true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 448 512">
+                    <path fill="#ececec"
+                      d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                  </svg>
+                </button>
+              </template>
             </div>
           </div>
           <br>
         </TheWindow>
+
+        <Modal :isOpen="showCVModal" @close="showCVModal = false" />
       </div>
     </div>
 
@@ -58,9 +66,15 @@
         <div class="font-bold text-sm mb-2">
           <p>Cuento con experiencia en los siguientes lenguajes:</p>
           <br>
-          <div class="flex max-sm:flex-col justify-center items-center gap-3">
+          <div class="flex flex-col items-center gap-3">
             <div class="flex flex-wrap justify-center text-2xl gap-2">
-              <a v-for="(icon, index) in portfolioData.skills.programming.items" :key="index"
+              <a v-for="(icon, index) in portfolioData.skills.programming.items.slice(0, 3)" :key="index"
+                class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
+                <img :src="icon" />
+              </a>
+            </div>
+            <div class="flex flex-wrap justify-center text-2xl gap-2">
+              <a v-for="(icon, index) in portfolioData.skills.programming.items.slice(3)" :key="index + 3"
                 class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
                 <img :src="icon" />
               </a>
@@ -74,9 +88,9 @@
         <div class="font-bold text-sm mb-2">
           <p>{{ portfolioData.skills.software.description }}</p>
           <br>
-          <div class="flex max-sm:flex-col justify-center items-center gap-3">
+          <div class="flex flex-col items-center gap-3">
             <div class="flex flex-wrap justify-center text-2xl gap-2">
-              <a v-for="(icon, index) in portfolioData.skills.software.items" :key="index"
+              <a v-for="(icon, index) in portfolioData.skills.software.items.slice(0, 3)" :key="index"
                 class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
                 <img :src="icon" />
               </a>
@@ -90,9 +104,15 @@
         <div class="font-bold text-sm mb-2">
           <p>{{ portfolioData.skills.learning.description }}</p>
           <br>
-          <div class="flex max-sm:flex-col justify-center items-center gap-3">
+          <div class="flex flex-col items-center gap-3">
             <div class="flex flex-wrap justify-center text-2xl gap-2">
-              <a v-for="(icon, index) in portfolioData.skills.learning.items" :key="index"
+              <a v-for="(icon, index) in portfolioData.skills.learning.items.slice(0, 3)" :key="index"
+                class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
+                <img :src="icon" />
+              </a>
+            </div>
+            <div class="flex flex-wrap justify-center text-2xl gap-2">
+              <a v-for="(icon, index) in portfolioData.skills.learning.items.slice(3)" :key="index + 3"
                 class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
                 <img :src="icon" />
               </a>
@@ -181,6 +201,7 @@
 import { onMounted, ref, nextTick, computed } from "vue";
 import TheWindow from "./components/TheWindow.vue";
 import { portfolioData } from "./lib/portfolioData";
+import Modal from './components/Modal.vue';
 
 import FundaprogImg from "@/assets/img/fundaprog.png";
 import VerdiaImg from "@/assets/img/verdia.png";
@@ -254,6 +275,7 @@ export default {
   name: "App",
   components: {
     TheWindow,
+    Modal,
   },
   setup() {
     const projectsWithImages = portfolioData.projects.items.map(project => {
@@ -316,12 +338,15 @@ export default {
       experiencesToShow.value = allExperiences.length;
     };
 
+    const showCVModal = ref(false);
+
     return {
       portfolioData,
       projects: projectsWithImages,
       carouselData,
       visibleExperiences,
       showLoadMore,
+      showCVModal,
       loadMoreExperiences
     };
   },

@@ -1,4 +1,3 @@
-// portfolioData.js
 export const portfolioData = {
     presentation: {
         title: "- P R E S E N T A C I Ó N -",
@@ -27,7 +26,7 @@ export const portfolioData = {
             {
                 name: "CV",
                 icon: "cv",
-                url: "https://drive.google.com/file/d/1BQTZHRKPZPwQ4Uaxhj04FB5k2hmdh-hI/view?usp=sharing"
+                // url: "https://drive.google.com/file/d/1BQTZHRKPZPwQ4Uaxhj04FB5k2hmdh-hI/view?usp=sharing"
             },
             {
                 name: "LinkedIn",
@@ -38,7 +37,7 @@ export const portfolioData = {
     },
     skills: {
         programming: {
-            title: "- L E N G U A J E S - D E - P R O G R A M A C I O N - (DSL y GPL) -",
+            title: "- L E N G U A J E S - D E -<br>P R O G R A M A C I O N<br>- (DSL y GPL) -",
             items: [
                 "https://skillicons.dev/icons?i=java",
                 "https://skillicons.dev/icons?i=html",
@@ -60,11 +59,12 @@ export const portfolioData = {
             title: "- A C T U A L - R U TA - D E - A P R E N D I Z A J E -",
             description: "He trabajado poco con estas herramientas y me gustaría aprender a manejarlas mejor.",
             items: [
-                "https://skillicons.dev/icons?i=ai",
                 "https://skillicons.dev/icons?i=ps",
                 "https://skillicons.dev/icons?i=js",
                 "https://skillicons.dev/icons?i=vue",
-                "https://skillicons.dev/icons?i=php"
+                "https://skillicons.dev/icons?i=php",
+                "https://skillicons.dev/icons?i=python",
+                "https://skillicons.dev/icons?i=postgres",
             ]
         }
     },
