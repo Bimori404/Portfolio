@@ -95,9 +95,9 @@ export const portfolioData = {
             {
                 id: "ControlAcadémico",
                 title: "Sistema de Control Académico",
-                description: [
-                    "- Administradores: Pueden visualizar gráficos clave, gestionar boletas, buscar por filtros, y validar datos (automática o manualmente)", "- Estudiantes: Pueden consultar su información académica, calificaciones y subir documentos importantes."
-                ],
+                description:
+                    "Administradores: Pueden visualizar gráficos clave, gestionar boletas, buscar por filtros, y validar datos (automática o manualmente). Estudiantes: Pueden consultar su información académica, calificaciones y subir documentos importantes."
+                ,
                 roles: ["#FullStack"]
             },
             {
