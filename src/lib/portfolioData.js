@@ -3,7 +3,7 @@ export const portfolioData = {
         title: "- P R E S E N T A C I Ó N -",
         name: "J. Samuel P. Gonzalez",
         description: [
-            "Web Developer | Frontend Web Developer | UX/UI Designer",
+            "Web Developer | Frontend Web Developer | UI Designer",
         ]
     },
     about: {
