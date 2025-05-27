@@ -3,14 +3,13 @@ export const portfolioData = {
         title: "- P R E S E N T A C I Ó N -",
         name: "J. Samuel P. Gonzalez",
         description: [
-            "Soy un apasionado del diseño y desarrollo, con habilidades y experiencia en la creación de sitios web que son tanto intuitivos como atractivos para el usuario.",
-            "Mi enfoque se centra en la creación de experiencias de usuario que sean fáciles de usar y visualmente atractivas, con el objetivo de mejorar la interacción y satisfacción del usuario con el sitio web."
+            "Web Developer | Frontend Web Developer | UX/UI Designer",
         ]
     },
     about: {
         title: "- S O B R E - M Í -",
         content: [
-            "Actualmente estoy estudiando la carrera de Ingeniería en Sistemas Computacionales.",
+            "Ingeniero en Sistemas Computacionales, con una sólida formación en desarrollo web y diseño UX/UI. Me apasiona crear experiencias digitales que sean intuitivas, accesibles y visualmente atractivas.",
             "Mi enfoque en el diseño y desarrollo web es crear interfaces limpias y atractivas que hagan que los usuarios se sientan cómodos y puedan navegar fácilmente. Lo que permite una experiencia de usuario óptima, trabajando con HTML, CSS y JavaScript, lo que me permite crear soluciones técnicas y funcionales.",
             "Cuento con un humor algo ácido y una personalidad muy carismática. Me considero una persona capaz y proactiva, con mucho interés en aprender cada día más, me encanta interactuar con la gente y trabajar en equipo."
         ]
