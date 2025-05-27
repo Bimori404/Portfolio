@@ -9,7 +9,7 @@ export const portfolioData = {
     about: {
         title: "- S O B R E - M Í -",
         content: [
-            "Ingeniero en Sistemas Computacionales, con una sólida formación en desarrollo web y diseño UX/UI. Me apasiona crear experiencias digitales que sean intuitivas, accesibles y visualmente atractivas.",
+            "Ingeniero en Sistemas Computacionales, con una sólida formación en desarrollo web y diseño UI. Me apasiona crear experiencias digitales que sean intuitivas, accesibles y visualmente atractivas.",
             "Mi enfoque en el diseño y desarrollo web es crear interfaces limpias y atractivas que hagan que los usuarios se sientan cómodos y puedan navegar fácilmente. Lo que permite una experiencia de usuario óptima, trabajando con HTML, CSS y JavaScript, lo que me permite crear soluciones técnicas y funcionales.",
             "Cuento con un humor algo ácido y una personalidad muy carismática. Me considero una persona capaz y proactiva, con mucho interés en aprender cada día más, me encanta interactuar con la gente y trabajar en equipo."
         ]
