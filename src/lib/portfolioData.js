@@ -20,7 +20,7 @@ export const portfolioData = {
             {
                 name: "GitHub",
                 icon: "fa-brands fa-github",
-                url: "https://github.com/Bimori404"
+                url: "https://github.com/fwcalledsam"
             },
             {
                 name: "CV",
