@@ -2,12 +2,12 @@
   <main class="sm:pt-5 relative max-w-screen-md mx-auto p-5">
     <!-- P R E S E N T A C I O N -->
     <TheWindow class="mb-3" :title="portfolioData.presentation.title" color="senary">
-      <div class="font-black text-5xl content-center mx-4">
-        Hola, me presento soy <span class="text-[var(--color-secondary)]"> <br> {{ portfolioData.presentation.name
-        }}</span>
-      </div><br>
-      <div class="font-bold text-lg mb-2 mx-4" v-for="(paragraph, index) in portfolioData.presentation.description"
-        :key="index">
+      <div class="font-black md:text-center mx-4 text-2xl md:text-5xl">
+        Hola, me presento soy <span class="text-[var(--color-secondary)] text-3xl md:text-6xl block">{{
+          portfolioData.presentation.name }}</span>
+      </div>
+      <div class="font-bold mb-2 mx-4 text-sm md:text-lg md:text-center"
+        v-for="(paragraph, index) in portfolioData.presentation.description" :key="index">
         {{ paragraph }}
       </div>
     </TheWindow>

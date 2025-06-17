@@ -1,9 +1,9 @@
 export const portfolioData = {
     presentation: {
         title: "- P R E S E N T A C I Ó N -",
-        name: "J. Samuel P. Gonzalez",
+        name: "Samuel Gonzalez",
         description: [
-            "Web Developer | Frontend Web Developer | UI Designer",
+            "Web Developer | Frontend | UI Designer",
         ]
     },
     about: {
