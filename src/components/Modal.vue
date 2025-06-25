@@ -48,7 +48,7 @@
                             class="text-xl font-bold mt-6 mb-3 pb-1 border-b border-gray-200 text-[var(--color-secondary)]">
                             Experiencia laboral</h2>
 
-                        <p class="mb-4"><strong>Residencia Profesional • CINVESTAV • Ene - May 2025</strong><br>
+                        <p class="mb-4"><strong>Residencia Profesional • CINVESTAV • Feb - May 2025</strong><br>
 
                             Durante mi residencia profesional en el CINVESTAV, diseñé y desarrollé una aplicación web
                             orientada a servicios para la gestión de proyectos de investigación. La
