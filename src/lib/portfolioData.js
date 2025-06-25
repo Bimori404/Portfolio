@@ -81,7 +81,7 @@ export const portfolioData = {
             {
                 position: "Desarrollador Web - Residencia Profesional",
                 company: "CINVESTAV - Tecnologías para la Gestión de Redes y Datos",
-                period: "Ene 2025 - May 2025",
+                period: "Feb 2025 - May 2025",
                 description: [
                     "Desarrollé una plataforma para organizar y seguir proyectos de investigación, asegurando que fuera intuitiva, confiable y lista para usarse por usuarios externos, estudiantes, investigadores y administradores."
                 ]
